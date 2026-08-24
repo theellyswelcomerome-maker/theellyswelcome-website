@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Ellys' Welcome — Anteprima Opzioni Hero Section</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700;800;900&family=Outfit:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,600;0,700;1,400&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --burgundy: #6B1E2A;
+      --burgundy-dark: #4A121C;
+      --gold: #C9A84C;
+      --gold-light: #E5C368;
+      --alabaster: #FAF8F5;
+      --charcoal: #1C1C24;
+      --card-bg: #FFFFFF;
+      --border: rgba(201, 168, 76, 0.25);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Outfit', sans-serif;
+      background: #0E0E12;
+      color: #FAF8F5;
+      padding: 2rem 1rem;
+      line-height: 1.5;
+    }
+
+    .preview-header {
+      text-align: center;
+      max-width: 900px;
+      margin: 0 auto 3rem auto;
+    }
+
+    .preview-badge {
+      display: inline-block;
+      padding: 0.35rem 1rem;
+      background: rgba(201, 168, 76, 0.15);
+      border: 1px solid var(--gold);
+      color: var(--gold);
+      border-radius: 50px;
+      font-size: 0.8rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      margin-bottom: 1rem;
+    }
+
+    .preview-title {
+      font-family: 'Cinzel', serif;
+      font-size: 2.2rem;
+      color: var(--alabaster);
+      margin-bottom: 0.5rem;
+    }
+
+    .preview-subtitle {
+      color: #A0A0B0;
+      font-size: 1rem;
+    }
+
+    .options-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 3rem;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .option-card {
+      background: #15151C;
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: 0 20px 40px rgba(0,0,0,0.5);
+    }
+
+    .option-header {
+      padding: 1.25rem 2rem;
+      background: #1C1C24;
+      border-bottom: 1px solid rgba(201, 168, 76, 0.2);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .option-tag {
+      font-family: 'Cinzel', serif;
+      font-weight: 700;
+      color: var(--gold);
+      font-size: 1.1rem;
+    }
+
+    .option-desc {
+      font-size: 0.85rem;
+      color: #A0A0B0;
+    }
+
+    /* =====================================================================
+       MOCKUP 1: DOPPIA CTA MONUMENTALE AFFIANCATA
+       ===================================================================== */
+    .hero-mockup-1 {
+      padding: 4.5rem 2rem;
+      background: radial-gradient(circle at 50% 30%, rgba(107, 30, 42, 0.45) 0%, rgba(20, 10, 14, 0.95) 80%), url('https://images.unsplash.com/photo-1552832230-c0197dd311b5?q=80&w=1600&auto=format&fit=crop') center/cover;
+      text-align: center;
+      position: relative;
+    }
+
+    .hero-superhost-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      background: rgba(0, 0, 0, 0.65);
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(201, 168, 76, 0.4);
+      padding: 0.45rem 1.2rem;
+      border-radius: 50px;
+      font-size: 0.82rem;
+      font-weight: 600;
+      color: var(--alabaster);
+      margin-bottom: 1.5rem;
+    }
+
+    .hero-h1-1 {
+      font-family: 'Cinzel', serif;
+      font-size: clamp(2rem, 4vw, 3.2rem);
+      font-weight: 800;
+      color: var(--alabaster);
+      line-height: 1.2;
+      max-width: 900px;
+      margin: 0 auto 1rem auto;
+      text-shadow: 0 4px 20px rgba(0,0,0,0.8);
+    }
+
+    .hero-h1-1 span {
+      background: linear-gradient(135deg, var(--gold) 0%, var(--gold-light) 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .hero-p-1 {
+      font-size: 1.1rem;
+      color: #E2DFD8;
+      max-width: 700px;
+      margin: 0 auto 2.5rem auto;
+      font-weight: 300;
+    }
+
+    .hero-cta-group-1 {
+      display: flex;
+      justify-content: center;
+      gap: 1.25rem;
+      flex-wrap: wrap;
+    }
+
+    .btn-b2b {
+      background: linear-gradient(135deg, var(--gold) 0%, #B3913B 100%);
+      color: #1A1A20;
+      padding: 0.95rem 2rem;
+      border-radius: 8px;
+      font-weight: 700;
+      font-size: 0.95rem;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      transition: all 0.3s;
+      box-shadow: 0 8px 25px rgba(201, 168, 76, 0.35);
+      border: none;
+      cursor: pointer;
+    }
+
+    .btn-b2c {
+      background: rgba(107, 30, 42, 0.8);
+      color: var(--alabaster);
+      padding: 0.95rem 2rem;
+      border-radius: 8px;
+      font-weight: 700;
+      font-size: 0.95rem;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      border: 1px solid rgba(201, 168, 76, 0.4);
+      backdrop-filter: blur(8px);
+      transition: all 0.3s;
+      cursor: pointer;
+    }
+
+    /* =====================================================================
+       MOCKUP 2: TAB SWITCHER DINAMICO
+       ===================================================================== */
+    .hero-mockup-2 {
+      padding: 4rem 2rem;
+      background: #181822;
+      text-align: center;
+    }
+
+    .tab-switch-container {
+      display: inline-flex;
+      background: rgba(0, 0, 0, 0.4);
+      padding: 5px;
+      border-radius: 50px;
+      border: 1px solid var(--border);
+      margin-bottom: 2rem;
+    }
+
+    .tab-switch-btn {
+      padding: 0.6rem 1.6rem;
+      border-radius: 50px;
+      font-size: 0.88rem;
+      font-weight: 600;
+      border: none;
+      cursor: pointer;
+      color: #A0A0B0;
+      background: transparent;
+      transition: all 0.2s;
+    }
+
+    .tab-switch-btn.active {
+      background: var(--burgundy);
+      color: var(--gold-light);
+      border: 1px solid var(--gold);
+    }
+
+    /* =====================================================================
+       MOCKUP 3: SPLIT DUAL-ENGINE (DUE ANIME AFFIANCATE)
+       ===================================================================== */
+    .hero-mockup-3 {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+    }
+
+    .split-col {
+      padding: 4rem 2.5rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      transition: all 0.3s;
+    }
+
+    .split-b2b {
+      background: linear-gradient(135deg, rgba(28, 28, 36, 0.95) 0%, rgba(20, 15, 20, 0.95) 100%);
+      border-right: 1px solid rgba(201, 168, 76, 0.2);
+    }
+
+    .split-b2c {
+      background: linear-gradient(135deg, rgba(107, 30, 42, 0.9) 0%, rgba(45, 12, 18, 0.95) 100%);
+    }
+
+    @media (max-width: 768px) {
+      .hero-mockup-3 {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="preview-header">
+    <div class="preview-badge">Fase 2 • The Ellys' Welcome</div>
+    <h1 class="preview-title">Seleziona la Struttura Hero</h1>
+    <p class="preview-subtitle">Confronto tra le 3 soluzioni per l'accoglienza del brand (B2B Proprietari + B2C Ospiti con Badge Airbnb)</p>
+  </div>
+
+  <div class="options-grid">
+
+    <!-- OPZIONE 1: (Consigliata dall'utente) -->
+    <div class="option-card">
+      <div class="option-header">
+        <div>
+          <span class="option-tag">✨ Opzione 1: Doppia CTA Monumentale (Consigliata)</span>
+          <div class="option-desc">Titolo istituzionale a tutto schermo, badge Superhost e due pulsanti d'azione affiancati</div>
+        </div>
+      </div>
+      <div class="hero-mockup-1">
+        <div class="hero-superhost-pill">
+          <span style="color: #FF5A5F; font-size: 1.1rem;">★</span>
+          <span>Superhost Airbnb 5.0 • Oltre 150+ Recensioni a Roma</span>
+        </div>
+        <h2 class="hero-h1-1">
+          L'Arte dell'Accoglienza Romana,<br><span>Il Rigore della Gestione Manageriale.</span>
+        </h2>
+        <p class="hero-p-1">
+          Valorizziamo immobili di pregio nel cuore di Roma. Zero pensieri burocratici per i proprietari, soggiorni a 5 stelle per viaggiatori internazionali.
+        </p>
+        <div class="hero-cta-group-1">
+          <button class="btn-b2b">🏛️ Sei un Proprietario? Candidati →</button>
+          <button class="btn-b2c">✨ Scopri le Dimore & Prenota</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- OPZIONE 2: Tab Switcher -->
+    <div class="option-card">
+      <div class="option-header">
+        <div>
+          <span class="option-tag">🔀 Opzione 2: Tab Switcher Interattivo</span>
+          <div class="option-desc">Commutazione dinamica in tempo reale tra la proposta per Proprietari e la vetrina Ospiti</div>
+        </div>
+      </div>
+      <div class="hero-mockup-2">
+        <div class="tab-switch-container">
+          <button class="tab-switch-btn active">🏛️ Per i Proprietari</button>
+          <button class="tab-switch-btn">✨ Per gli Ospiti</button>
+        </div>
+        <h2 class="hero-h1-1" style="font-size: 2.3rem;">
+          Massimizza la Rendita del tuo Immobile.<br><span>Affidalo a una Gestione d'Eccellenza.</span>
+        </h2>
+        <p class="hero-p-1">
+          Automazione fiscale 100%, manutenzione costante e rendiconto live. Ci prendiamo cura della tua casa come fosse la nostra.
+        </p>
+        <button class="btn-b2b" style="margin: 0 auto;">Richiedi Perizia Gratuita →</button>
+      </div>
+    </div>
+
+    <!-- OPZIONE 3: Split Dual Engine -->
+    <div class="option-card">
+      <div class="option-header">
+        <div>
+          <span class="option-tag">⚖️ Opzione 3: Split Dual-Engine</span>
+          <div class="option-desc">Doppia vetrina a colonne affiancate con identità e percorsi distinti a colpo d'occhio</div>
+        </div>
+      </div>
+      <div class="hero-mockup-3">
+        <div class="split-col split-b2b">
+          <div style="color: var(--gold); font-size: 0.8rem; font-weight: 700; text-transform: uppercase; margin-bottom: 0.5rem;">Per Proprietari & Investitori</div>
+          <h3 style="font-family: 'Cinzel', serif; font-size: 1.6rem; margin-bottom: 1rem; color: #FFF;">Gestione Completa "Zero Pensieri"</h3>
+          <p style="font-size: 0.9rem; color: #A0A0B0; margin-bottom: 1.5rem;">Tutela dell'immobile, cura degli ospiti e ottimizzazione delle tariffe con la nostra tecnologia proprietaria.</p>
+          <button class="btn-b2b" style="align-self: flex-start;">Valuta il tuo Immobile →</button>
+        </div>
+        <div class="split-col split-b2c">
+          <div style="color: var(--gold-light); font-size: 0.8rem; font-weight: 700; text-transform: uppercase; margin-bottom: 0.5rem;">Per i Viaggiatori</div>
+          <h3 style="font-family: 'Cinzel', serif; font-size: 1.6rem; margin-bottom: 1rem; color: #FFF;">Dimore Storiche & Roma Autentica</h3>
+          <p style="font-size: 0.9rem; color: #FAF8F5; opacity: 0.85; margin-bottom: 1.5rem;">Soggiorna nelle nostre case a Navona, Monteverde e Marconi con assistenza H24 e welcome kit tipico.</p>
+          <button class="btn-b2c" style="align-self: flex-start;">Prenota un Soggiorno →</button>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+</body>
+</html>

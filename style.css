@@ -1,0 +1,910 @@
+/**
+ * The Ellys' Welcome — Official Website Stylesheet (Classic High-Contrast Edition)
+ * Brand System: Imperial Burgundy (#6B1E2A), Antique Gold (#C9A84C), Alabaster (#FAF8F5), Deep Charcoal (#1C1C24)
+ * Typography: Cinzel (Headings), Outfit (Body & UI), Playfair Display (Accents)
+ */
+
+:root {
+  --burgundy: #6B1E2A;
+  --burgundy-light: #8A2B3B;
+  --burgundy-dark: #4A121C;
+  --burgundy-deep: #2D0C12;
+  --gold: #C9A84C;
+  --gold-light: #E5C368;
+  --gold-soft: rgba(201, 168, 76, 0.18);
+  --gold-glow: rgba(201, 168, 76, 0.35);
+  --alabaster: #FAF8F5;
+  --alabaster-warm: #F4EFEA;
+  --alabaster-card: #FFFFFF;
+  --charcoal: #1C1C24;
+  --charcoal-card: #23232E;
+  --charcoal-card-hover: #2B2B38;
+  --charcoal-light: #2C2C3A;
+  --airbnb-coral: #FF5A5F;
+  --airbnb-coral-dark: #E0484D;
+  --text-dark: #1C1C24;
+  --text-muted: #5A5A66;
+  --text-light: #FAF8F5;
+  --text-light-muted: #C0BDC8;
+  --border-gold: rgba(201, 168, 76, 0.35);
+  --border-card: rgba(107, 30, 42, 0.15);
+  --radius-sm: 8px;
+  --radius-md: 14px;
+  --radius-lg: 22px;
+  --shadow-gold: 0 10px 30px rgba(201, 168, 76, 0.25);
+  --shadow-dark: 0 20px 40px rgba(0, 0, 0, 0.4);
+  --shadow-card: 0 10px 25px rgba(0, 0, 0, 0.06);
+  --transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+}
+
+body {
+  font-family: 'Outfit', sans-serif;
+  background-color: var(--alabaster);
+  color: var(--text-dark);
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+/* Tipografia */
+h1, h2, h3, h4, .font-serif {
+  font-family: 'Cinzel', serif;
+  font-weight: 700;
+  letter-spacing: 0.8px;
+}
+
+.font-accent {
+  font-family: 'Playfair Display', serif;
+  font-style: italic;
+}
+
+/* Container */
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+/* =========================================================================
+   NAVBAR & HEADER
+   ========================================================================= */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  background: rgba(28, 28, 36, 0.94);
+  backdrop-filter: blur(16px);
+  border-bottom: 1px solid var(--border-gold);
+  padding: 0.75rem 0;
+  transition: var(--transition);
+}
+
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.brand-logo {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  text-decoration: none;
+}
+
+.brand-logo img {
+  height: 44px;
+  width: auto;
+}
+
+.brand-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.brand-name {
+  font-family: 'Cinzel', serif;
+  font-size: 1.1rem;
+  font-weight: 800;
+  color: var(--alabaster);
+  letter-spacing: 1px;
+}
+
+.brand-tagline {
+  font-size: 0.65rem;
+  color: var(--gold);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-weight: 600;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  list-style: none;
+}
+
+.nav-link {
+  color: var(--text-light-muted);
+  text-decoration: none;
+  font-size: 0.88rem;
+  font-weight: 500;
+  transition: var(--transition);
+}
+
+.nav-link:hover {
+  color: var(--gold-light);
+}
+
+.nav-cta {
+  background: linear-gradient(135deg, var(--gold) 0%, #B3913B 100%);
+  color: #1A1A20 !important;
+  padding: 0.5rem 1.2rem;
+  border-radius: var(--radius-sm);
+  font-weight: 700 !important;
+  box-shadow: 0 4px 15px rgba(201, 168, 76, 0.3);
+  transition: var(--transition);
+}
+
+.nav-cta:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(201, 168, 76, 0.5);
+}
+
+.mobile-menu-btn {
+  display: none;
+  background: transparent;
+  border: none;
+  color: var(--gold);
+  font-size: 1.6rem;
+  cursor: pointer;
+}
+
+/* =========================================================================
+   HERO SECTION
+   ========================================================================= */
+.hero {
+  position: relative;
+  min-height: 88vh;
+  padding: 7.5rem 0 4.5rem 0;
+  background: radial-gradient(circle at 50% 30%, rgba(107, 30, 42, 0.62) 0%, rgba(20, 10, 14, 0.98) 85%),
+              url('https://images.unsplash.com/photo-1552832230-c0197dd311b5?q=80&w=1920&auto=format&fit=crop') center/cover no-repeat;
+  display: flex;
+  align-items: center;
+  color: var(--alabaster);
+  text-align: center;
+}
+
+.hero-content {
+  max-width: 960px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 2;
+}
+
+.hero-title {
+  font-size: clamp(2.2rem, 4.5vw, 3.8rem);
+  font-weight: 800;
+  line-height: 1.2;
+  margin-bottom: 1.2rem;
+  text-shadow: 0 4px 25px rgba(0,0,0,0.85);
+  word-spacing: 2px;
+}
+
+.hero-title .gradient-gold {
+  background: linear-gradient(135deg, var(--gold) 0%, var(--gold-light) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.hero-subtitle {
+  font-size: clamp(1rem, 1.8vw, 1.2rem);
+  color: #E6E3DC;
+  font-weight: 300;
+  max-width: 780px;
+  margin: 0 auto 2.5rem auto;
+  line-height: 1.6;
+}
+
+/* Dual Pathways Cards in Hero */
+.hero-dual-pathways {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+  text-align: left;
+  margin-top: 1.5rem;
+}
+
+.pathway-card {
+  background: rgba(28, 28, 36, 0.85);
+  backdrop-filter: blur(16px);
+  border: 1px solid var(--border-gold);
+  border-radius: var(--radius-md);
+  padding: 1.85rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: var(--transition);
+  box-shadow: 0 15px 35px rgba(0,0,0,0.5);
+}
+
+.pathway-card:hover {
+  transform: translateY(-4px);
+  border-color: var(--gold);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.7);
+}
+
+.pathway-card.b2b-card {
+  border-top: 4px solid var(--gold);
+}
+
+.pathway-card.b2c-card {
+  border-top: 4px solid var(--airbnb-coral);
+}
+
+.pathway-tag {
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  margin-bottom: 0.5rem;
+}
+
+.b2b-card .pathway-tag { color: var(--gold); }
+.b2c-card .pathway-tag { color: #FFA3A6; }
+
+.pathway-title {
+  font-size: 1.35rem;
+  margin-bottom: 0.65rem;
+  color: var(--alabaster);
+}
+
+.pathway-desc {
+  font-size: 0.9rem;
+  color: var(--text-light-muted);
+  margin-bottom: 1.5rem;
+  line-height: 1.5;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.85rem 1.6rem;
+  border-radius: var(--radius-sm);
+  font-weight: 700;
+  font-size: 0.92rem;
+  text-decoration: none;
+  cursor: pointer;
+  transition: var(--transition);
+  border: none;
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, var(--gold) 0%, #B3913B 100%);
+  color: #1A1A20;
+  box-shadow: 0 6px 20px rgba(201, 168, 76, 0.35);
+}
+
+.btn-primary:hover {
+  background: linear-gradient(135deg, var(--gold-light) 0%, var(--gold) 100%);
+  transform: translateY(-2px);
+  box-shadow: 0 10px 28px rgba(201, 168, 76, 0.5);
+}
+
+.btn-secondary {
+  background: rgba(107, 30, 42, 0.9);
+  color: var(--alabaster);
+  border: 1px solid var(--border-gold);
+}
+
+.btn-secondary:hover {
+  background: var(--burgundy);
+  border-color: var(--gold);
+  transform: translateY(-2px);
+}
+
+/* =========================================================================
+   AIRBNB REVIEWS & PROFILES SECTION
+   ========================================================================= */
+.social-proof-section {
+  background: linear-gradient(180deg, #1C1C24 0%, #14141A 100%);
+  color: var(--alabaster);
+  padding: 5rem 0;
+  border-bottom: 1px solid rgba(201, 168, 76, 0.2);
+}
+
+.proof-header {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto 3rem auto;
+}
+
+.proof-title {
+  font-size: 2.2rem;
+  margin-bottom: 0.65rem;
+  color: var(--alabaster);
+}
+
+.reviews-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(310px, 1fr));
+  gap: 1.5rem;
+}
+
+.review-card {
+  background: var(--charcoal-card);
+  border: 1px solid rgba(201, 168, 76, 0.2);
+  border-radius: var(--radius-md);
+  padding: 1.85rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-shadow: var(--shadow-dark);
+  transition: var(--transition);
+  position: relative;
+  overflow: hidden;
+}
+
+.review-card:hover {
+  transform: translateY(-5px);
+  background: var(--charcoal-card-hover);
+  border-color: var(--gold);
+  box-shadow: 0 15px 35px rgba(201, 168, 76, 0.18);
+}
+
+.review-stars {
+  color: var(--airbnb-coral);
+  font-size: 1.1rem;
+  margin-bottom: 0.85rem;
+}
+
+.review-quote {
+  font-size: 0.92rem;
+  color: #E6E3DC;
+  font-style: italic;
+  line-height: 1.65;
+  margin-bottom: 1.35rem;
+}
+
+.review-author-meta {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  padding-top: 0.85rem;
+}
+
+.author-avatar {
+  width: 38px;
+  height: 38px;
+  background: var(--burgundy);
+  color: var(--gold);
+  border: 1px solid var(--gold);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 0.85rem;
+}
+
+.author-name {
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: var(--alabaster);
+}
+
+.author-origin {
+  font-size: 0.75rem;
+  color: var(--text-light-muted);
+}
+
+.airbnb-hub-card {
+  grid-column: 1 / -1;
+  background: radial-gradient(circle at 50% 50%, rgba(107, 30, 42, 0.35) 0%, rgba(35, 35, 46, 0.95) 80%);
+  border: 1px solid var(--border-gold);
+  border-radius: var(--radius-md);
+  padding: 1.75rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  margin-top: 1rem;
+  transition: var(--transition);
+}
+
+.airbnb-hub-card:hover {
+  border-color: var(--gold);
+  box-shadow: 0 15px 35px rgba(201, 168, 76, 0.15);
+}
+
+.airbnb-hub-left {
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+}
+
+.airbnb-hub-icon {
+  font-size: 2.2rem;
+  color: var(--airbnb-coral);
+}
+
+.airbnb-hub-title {
+  font-family: 'Cinzel', serif;
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--alabaster);
+}
+
+.airbnb-hub-sub {
+  font-size: 0.85rem;
+  color: var(--text-light-muted);
+}
+
+.airbnb-hub-actions {
+  display: flex;
+  gap: 0.85rem;
+  flex-wrap: wrap;
+}
+
+.btn-airbnb-hub {
+  background: rgba(255, 90, 95, 0.12);
+  border: 1px solid var(--airbnb-coral);
+  color: #FFA3A6;
+  padding: 0.65rem 1.25rem;
+  border-radius: var(--radius-sm);
+  font-size: 0.85rem;
+  font-weight: 700;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  transition: var(--transition);
+}
+
+.btn-airbnb-hub:hover {
+  background: var(--airbnb-coral);
+  color: #FFFFFF;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(255, 90, 95, 0.4);
+}
+
+/* =========================================================================
+   B2B: I 4 PILASTRI (COMPATTI, QUADRATI & ALTO RISALTO)
+   ========================================================================= */
+.section-b2b {
+  padding: 5rem 0;
+  background: var(--alabaster-warm);
+  border-top: 1px solid var(--border-gold);
+  border-bottom: 1px solid var(--border-gold);
+}
+
+.section-header {
+  text-align: center;
+  max-width: 820px;
+  margin: 0 auto 2.8rem auto;
+}
+
+.section-badge {
+  display: inline-block;
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: var(--burgundy);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 0.5rem;
+  background: rgba(107, 30, 42, 0.08);
+  padding: 3px 12px;
+  border-radius: 50px;
+}
+
+.section-title {
+  font-size: clamp(1.9rem, 3vw, 2.5rem);
+  color: var(--burgundy);
+  margin-bottom: 0.85rem;
+}
+
+.section-lead {
+  font-size: 1.02rem;
+  color: var(--text-muted);
+  font-weight: 300;
+  line-height: 1.55;
+}
+
+.pillars-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.35rem;
+}
+
+.pillar-card {
+  background: #FFFFFF;
+  border: 2px solid var(--burgundy);
+  border-radius: var(--radius-md);
+  padding: 1.5rem 1.4rem;
+  box-shadow: 0 10px 25px rgba(107, 30, 42, 0.07);
+  transition: var(--transition);
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.pillar-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 5px;
+  background: linear-gradient(90deg, var(--burgundy) 0%, var(--gold) 100%);
+}
+
+.pillar-card:hover {
+  transform: translateY(-4px);
+  border-color: var(--gold);
+  box-shadow: 0 16px 35px rgba(201, 168, 76, 0.2);
+}
+
+.pillar-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 0.85rem;
+}
+
+.pillar-icon {
+  font-size: 1.8rem;
+}
+
+.pillar-num {
+  font-family: 'Cinzel', serif;
+  font-size: 0.8rem;
+  font-weight: 800;
+  color: var(--gold);
+  background: rgba(201, 168, 76, 0.15);
+  padding: 2px 8px;
+  border-radius: 4px;
+}
+
+.pillar-title {
+  font-size: 1.12rem;
+  color: var(--burgundy);
+  margin-bottom: 0.5rem;
+  font-weight: 800;
+}
+
+.pillar-desc {
+  font-size: 0.88rem;
+  color: var(--text-dark);
+  line-height: 1.5;
+}
+
+/* =========================================================================
+   STORYTELLING & FOUNDER BIO
+   ========================================================================= */
+.story-section {
+  padding: 5.5rem 0;
+  background: var(--alabaster);
+}
+
+.story-grid {
+  display: grid;
+  grid-template-columns: 4fr 5fr;
+  gap: 3.5rem;
+  align-items: center;
+}
+
+.story-image-wrap {
+  position: relative;
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.18);
+  border: 3px solid var(--burgundy);
+}
+
+.story-image-wrap img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.story-badge-floating {
+  position: absolute;
+  bottom: 1rem;
+  left: 1rem;
+  right: 1rem;
+  background: rgba(28, 28, 36, 0.94);
+  backdrop-filter: blur(10px);
+  border: 1px solid var(--border-gold);
+  border-radius: var(--radius-sm);
+  padding: 0.85rem 1.1rem;
+  color: var(--alabaster);
+}
+
+.story-content h3 {
+  font-size: 2.1rem;
+  color: var(--burgundy);
+  margin-bottom: 1.1rem;
+}
+
+.story-text {
+  font-size: 0.95rem;
+  color: #3A3A42;
+  margin-bottom: 1.1rem;
+  line-height: 1.65;
+}
+
+/* =========================================================================
+   SHOWCASE DIMORE (CARD CLICCABILI + BOTTONE SFUMATO ELEGANTE)
+   ========================================================================= */
+.dimore-section {
+  padding: 5.5rem 0;
+  background: var(--alabaster-warm);
+}
+
+.dimore-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 2rem;
+}
+
+.dimora-card-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.dimora-clickable-card {
+  display: block;
+  text-decoration: none;
+  background: var(--alabaster-card);
+  border-radius: var(--radius-md) var(--radius-md) 0 0;
+  overflow: hidden;
+  border: 2px solid rgba(107, 30, 42, 0.15);
+  border-bottom: none;
+  box-shadow: var(--shadow-card);
+  transition: var(--transition);
+  color: inherit;
+  flex: 1;
+}
+
+.dimora-clickable-card:hover {
+  transform: translateY(-4px);
+  border-color: var(--burgundy);
+  box-shadow: 0 16px 35px rgba(107, 30, 42, 0.15);
+}
+
+.dimora-img-wrap {
+  position: relative;
+  overflow: hidden;
+  height: 250px;
+}
+
+.dimora-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.4s ease;
+}
+
+.dimora-clickable-card:hover .dimora-img {
+  transform: scale(1.05);
+}
+
+.dimora-airbnb-badge {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: rgba(28, 28, 36, 0.88);
+  backdrop-filter: blur(8px);
+  border: 1px solid var(--border-gold);
+  color: var(--gold-light);
+  padding: 0.35rem 0.85rem;
+  border-radius: 50px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.dimora-body {
+  padding: 1.6rem;
+}
+
+.dimora-location {
+  font-size: 0.75rem;
+  color: var(--gold);
+  font-weight: 700;
+  text-transform: uppercase;
+  margin-bottom: 0.35rem;
+}
+
+.dimora-title {
+  font-size: 1.35rem;
+  color: var(--burgundy);
+  margin-bottom: 0.5rem;
+}
+
+.dimora-features {
+  display: flex;
+  gap: 0.75rem;
+  font-size: 0.82rem;
+  color: var(--text-muted);
+  margin-bottom: 0.85rem;
+  border-bottom: 1px solid var(--border-subtle);
+  padding-bottom: 0.65rem;
+  font-weight: 500;
+}
+
+.dimora-desc {
+  font-size: 0.88rem;
+  color: #4A4A55;
+  line-height: 1.5;
+}
+
+.dimora-cin-badge {
+  display: inline-block;
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: var(--burgundy);
+  background: rgba(107, 30, 42, 0.08);
+  padding: 2px 8px;
+  border-radius: 4px;
+  margin-top: 0.75rem;
+}
+
+.dimora-airbnb-prompt {
+  margin-top: 0.85rem;
+  font-size: 0.8rem;
+  color: var(--airbnb-coral);
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+}
+
+.dimora-direct-btn {
+  background: linear-gradient(135deg, rgba(201, 168, 76, 0.15) 0%, rgba(107, 30, 42, 0.12) 100%);
+  color: var(--burgundy);
+  text-align: center;
+  padding: 0.85rem 1rem;
+  border-radius: 0 0 var(--radius-md) var(--radius-md);
+  font-weight: 700;
+  font-size: 0.86rem;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.45rem;
+  border: 2px solid rgba(107, 30, 42, 0.25);
+  border-top: 1px solid rgba(107, 30, 42, 0.12);
+  transition: var(--transition);
+}
+
+.dimora-direct-btn:hover {
+  background: linear-gradient(135deg, var(--gold) 0%, #B3913B 100%);
+  color: #1A1A20;
+  border-color: var(--burgundy);
+  box-shadow: 0 6px 20px rgba(201, 168, 76, 0.35);
+}
+
+/* =========================================================================
+   LEAD CAPTURE FORM (ALTO CONTRASTO & ELEGANZA)
+   ========================================================================= */
+.contact-section {
+  padding: 5.5rem 0;
+  background: linear-gradient(180deg, #1C1C24 0%, #121218 100%);
+  color: var(--alabaster);
+  position: relative;
+}
+
+.form-card {
+  max-width: 780px;
+  margin: 0 auto;
+  background: #20202B;
+  border: 2px solid var(--gold);
+  border-radius: var(--radius-lg);
+  padding: 2.8rem 2.2rem;
+  box-shadow: 0 25px 50px rgba(0,0,0,0.65);
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.25rem;
+  margin-top: 1.25rem;
+}
+
+.form-group.full {
+  grid-column: span 2;
+}
+
+.form-label {
+  display: block;
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--gold-light);
+  margin-bottom: 0.35rem;
+}
+
+.form-control {
+  width: 100%;
+  padding: 0.85rem 1rem;
+  background: #15151C;
+  border: 1px solid rgba(201, 168, 76, 0.35);
+  border-radius: var(--radius-sm);
+  color: var(--alabaster);
+  font-family: 'Outfit', sans-serif;
+  font-size: 0.92rem;
+  transition: var(--transition);
+}
+
+.form-control:focus {
+  outline: none;
+  border-color: var(--gold);
+  box-shadow: 0 0 15px var(--gold-glow);
+}
+
+/* =========================================================================
+   FOOTER ISTITUZIONALE
+   ========================================================================= */
+.footer {
+  background: #0A0A0E;
+  color: var(--text-light-muted);
+  padding: 4rem 0 2rem 0;
+  border-top: 1px solid var(--border-gold);
+  font-size: 0.88rem;
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: 2fr 1.3fr 1fr;
+  gap: 2.5rem;
+  margin-bottom: 2.5rem;
+}
+
+.footer-bottom {
+  text-align: center;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  padding-top: 1.5rem;
+  font-size: 0.78rem;
+  color: #8C8C98;
+  line-height: 1.6;
+}
+
+@media (max-width: 900px) {
+  .hero-dual-pathways, .story-grid, .footer-grid {
+    grid-template-columns: 1fr;
+  }
+  .form-grid {
+    grid-template-columns: 1fr;
+  }
+  .form-group.full {
+    grid-column: span 1;
+  }
+  .nav-links {
+    display: none;
+  }
+  .mobile-menu-btn {
+    display: block;
+  }
+}
