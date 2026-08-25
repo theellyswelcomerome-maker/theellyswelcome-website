@@ -5,7 +5,30 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>The Ellys' Welcome — "Your Home, Our Care" | Property Management & Dimore a Roma</title>
   <meta name="description" content="The Ellys' Welcome: gestione curata, trasparente e tecnologica di immobili turistici a Roma. Accoglienza familiare autentica e zero pensieri burocratici.">
-  
+  <link rel="canonical" href="https://theellyswelcome.com/">
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://theellyswelcome.com/">
+  <meta property="og:title" content="The Ellys' Welcome — Property Management & Dimore a Roma">
+  <meta property="og:description" content="L'Arte dell'Accoglienza Romana, il Rigore della Gestione Manageriale. Gestione alloggi turistici e dimore esclusive a Roma.">
+  <meta property="og:image" content="https://theellyswelcome.com/assets/logo.png">
+  <meta property="og:locale" content="it_IT">
+  <meta property="og:site_name" content="The Ellys' Welcome">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:url" content="https://theellyswelcome.com/">
+  <meta name="twitter:title" content="The Ellys' Welcome — Property Management a Roma">
+  <meta name="twitter:description" content="Gestione curata e trasparente di case vacanze a Roma. Massima rendita e zero pensieri per i proprietari.">
+  <meta name="twitter:image" content="https://theellyswelcome.com/assets/logo.png">
+
+  <!-- Geotagging Roma -->
+  <meta name="geo.region" content="IT-RM">
+  <meta name="geo.placename" content="Roma">
+  <meta name="geo.position" content="41.8902;12.4922">
+  <meta name="ICBM" content="41.8902, 12.4922">
+
   <!-- Favicon / Logo -->
   <link rel="icon" type="image/png" href="assets/logo.png">
 
@@ -16,6 +39,108 @@
   
   <!-- Stylesheet -->
   <link rel="stylesheet" href="style.css">
+
+  <!-- Schema.org JSON-LD Dati Strutturati -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "LodgingBusiness",
+        "@id": "https://theellyswelcome.com/#business",
+        "name": "The Ellys' Welcome",
+        "alternateName": "The Ellys' Welcome di Fiorino Giovanni",
+        "url": "https://theellyswelcome.com/",
+        "logo": "https://theellyswelcome.com/assets/logo.png",
+        "image": "https://theellyswelcome.com/assets/logo.png",
+        "description": "Property management d'eccellenza e gestione di dimore turistiche nel cuore di Roma. Accoglienza familiare autentica e automazione burocratica completa.",
+        "telephone": "+393383956240",
+        "email": "theellyswelcomerome@gmail.com",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "Via Edoardo Jenner, 119 - Int. 36",
+          "addressLocality": "Roma",
+          "postalCode": "00151",
+          "addressRegion": "RM",
+          "addressCountry": "IT"
+        },
+        "founder": {
+          "@type": "Person",
+          "name": "Giovanni Fiorino",
+          "jobTitle": "Founder & Property Manager"
+        },
+        "sameAs": [
+          "https://www.instagram.com/theellyswelcome.rome/",
+          "https://www.airbnb.it/users/profile/1685312388218791725",
+          "https://www.airbnb.it/users/profile/1463769468775481181"
+        ]
+      },
+      {
+        "@type": "Apartment",
+        "@id": "https://theellyswelcome.com/#spacedom",
+        "name": "Space Dom",
+        "description": "Attico con travi a vista nel cuore di Roma a Via del Governo Vecchio (Piazza Navona).",
+        "occupancy": {
+          "@type": "QuantitativeValue",
+          "maxValue": 6
+        },
+        "identifier": "IT058091C2OP2KNH3C",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "Via del Governo Vecchio",
+          "addressLocality": "Roma",
+          "addressRegion": "RM",
+          "addressCountry": "IT"
+        }
+      },
+      {
+        "@type": "Apartment",
+        "@id": "https://theellyswelcome.com/#ellyshouse",
+        "name": "Elly's House",
+        "description": "Dimora curata e tranquilla nel quartiere residenziale di Monteverde, vicina a Trastevere.",
+        "occupancy": {
+          "@type": "QuantitativeValue",
+          "maxValue": 4
+        },
+        "identifier": "IT058091C2AGXKMIKB",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "Via San Girolamo Emiliani",
+          "addressLocality": "Roma",
+          "addressRegion": "RM",
+          "addressCountry": "IT"
+        }
+      },
+      {
+        "@type": "Apartment",
+        "@id": "https://theellyswelcome.com/#dipohouse",
+        "name": "Dipo House",
+        "description": "Trilocale moderno e luminoso nel quartiere Marconi, polo Roma Tre e Stazione Trastevere.",
+        "occupancy": {
+          "@type": "QuantitativeValue",
+          "maxValue": 4
+        },
+        "identifier": "IT058091C24OKKNEHK",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "Via Quirino Majorana",
+          "addressLocality": "Roma",
+          "addressRegion": "RM",
+          "addressCountry": "IT"
+        }
+      }
+    ]
+  }
+  </script>
+
+  <!-- Google Analytics 4 (Opzionale: sostituire G-MEASUREMENT_ID con il proprio ID) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-MEASUREMENT_ID"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-MEASUREMENT_ID', { anonymize_ip: true });
+  </script>
 </head>
 <body>
 
@@ -25,7 +150,7 @@
   <nav class="navbar">
     <div class="container nav-container">
       <a href="#" class="brand-logo">
-        <img src="assets/logo.png" alt="The Ellys' Welcome Logo">
+        <img src="assets/logo.png" alt="The Ellys' Welcome Logo" width="44" height="44" fetchpriority="high" decoding="async">
         <div class="brand-text">
           <span class="brand-name">THE ELLYS' WELCOME</span>
           <span class="brand-tagline">Your Home, Our Care</span>
@@ -252,7 +377,7 @@
       <div class="story-grid">
         
         <div class="story-image-wrap">
-          <img src="assets/giovanni.jpg" alt="Giovanni Fiorino — Founder & Property Manager">
+          <img src="assets/giovanni.jpg" alt="Giovanni Fiorino — Founder & Property Manager" loading="lazy" decoding="async" width="500" height="600">
           <div class="story-badge-floating">
             <strong style="color: var(--gold); font-size: 1.05rem;">Giovanni Fiorino</strong><br>
             <span style="font-size: 0.85rem; color: #D0D0D8;">Founder & Property Manager • Università di Roma Tre</span>
@@ -304,7 +429,7 @@
         <div class="dimora-card-wrapper">
           <a href="https://www.airbnb.it/rooms/1363113629357768975?source_impression_id=p3_1787579631_P3eaWgtd9Msi8TO4" target="_blank" rel="noopener noreferrer" class="dimora-clickable-card" title="Clicca per aprire l'annuncio Airbnb di Space Dom">
             <div class="dimora-img-wrap">
-              <img src="assets/spacedom.jpg" alt="Space Dom — Via del Governo Vecchio" class="dimora-img">
+              <img src="assets/spacedom.jpg" alt="Space Dom — Via del Governo Vecchio" class="dimora-img" loading="lazy" decoding="async" width="600" height="400">
               <div class="dimora-airbnb-badge">
                 <span>★</span> Airbnb Ufficiale ↗
               </div>
@@ -335,7 +460,7 @@
         <div class="dimora-card-wrapper">
           <a href="https://www.airbnb.it/rooms/657062393546995233?source_impression_id=p3_1787579706_P3y6OGJAzzbxVi8V" target="_blank" rel="noopener noreferrer" class="dimora-clickable-card" title="Clicca per aprire l'annuncio Airbnb di Elly's House">
             <div class="dimora-img-wrap">
-              <img src="assets/ellyshouse.png" alt="Elly's House — Monteverde" class="dimora-img">
+              <img src="assets/ellyshouse.png" alt="Elly's House — Monteverde" class="dimora-img" loading="lazy" decoding="async" width="600" height="400">
               <div class="dimora-airbnb-badge">
                 <span>★</span> Airbnb Ufficiale ↗
               </div>
@@ -366,7 +491,7 @@
         <div class="dimora-card-wrapper">
           <a href="https://www.airbnb.it/rooms/1125438508462187206?source_impression_id=p3_1787579674_P37oEA5RUicw2iwO" target="_blank" rel="noopener noreferrer" class="dimora-clickable-card" title="Clicca per aprire l'annuncio Airbnb di Dipo House">
             <div class="dimora-img-wrap">
-              <img src="assets/dipohouse.png" alt="Dipo House — Marconi" class="dimora-img">
+              <img src="assets/dipohouse.png" alt="Dipo House — Marconi" class="dimora-img" loading="lazy" decoding="async" width="600" height="400">
               <div class="dimora-airbnb-badge">
                 <span>★</span> Airbnb Ufficiale ↗
               </div>
@@ -414,6 +539,8 @@
 
       <div class="form-card">
         <form id="ownerLeadForm" onsubmit="handleLeadSubmit(event)">
+          <!-- Honeypot antispam -->
+          <input type="text" id="ownerHp" name="_hp" style="display:none !important;" tabindex="-1" autocomplete="off">
           
           <div class="form-grid">
             
@@ -473,7 +600,20 @@
 
           <div id="formSuccessMessage" style="display: none; margin-top: 1.5rem; padding: 1.35rem; background: rgba(16, 185, 129, 0.15); border: 1px solid #10B981; border-radius: var(--radius-sm); color: #10B981; text-align: center;">
             <strong style="font-size: 1.1rem;">✓ Richiesta Ricevuta con Successo!</strong><br>
-            <span style="font-size: 0.9rem; color: var(--alabaster); display: block; margin-top: 0.35rem;">Grazie per averci contattato. Giovanni ti risponderà personalmente entro 24 ore per concordare una chiacchierata senza impegno.</span>
+            <span style="font-size: 0.9rem; color: var(--alabaster); display: block; margin-top: 0.35rem; margin-bottom: 1rem;">
+              Grazie per averci contattato. Giovanni ti risponderà personalmente entro 24 ore per concordare una chiacchierata senza impegno.
+            </span>
+            <a href="https://wa.me/393383956240?text=Ciao%20Giovanni!%20Ho%20appena%20compilato%20il%20modulo%20sul%20sito%20per%20il%20mio%20immobile." target="_blank" rel="noopener noreferrer" class="btn btn-secondary" style="display: inline-block; padding: 0.6rem 1.2rem; font-size: 0.9rem;">
+              💬 Scrivi subito su WhatsApp per priorità diretta →
+            </a>
+          </div>
+
+          <div id="formErrorMessage" style="display: none; margin-top: 1.5rem; padding: 1.35rem; background: rgba(239, 68, 68, 0.15); border: 1px solid #EF4444; border-radius: var(--radius-sm); color: #FCA5A5; text-align: center;">
+            <strong style="font-size: 1.1rem; color: #EF4444;">⚠️ Si è verificato un problema</strong><br>
+            <span style="font-size: 0.9rem; color: var(--alabaster); display: block; margin-top: 0.35rem;">
+              Non siamo riusciti a trasmettere automaticamente la richiesta. Puoi scriverci direttamente su WhatsApp: 
+              <a href="https://wa.me/393383956240?text=Ciao%20Giovanni!%20Vorrei%20informazioni%20sulla%20gestione%20del%20mio%20immobile." target="_blank" rel="noopener noreferrer" style="color: var(--gold-light); font-weight: 700; text-decoration: underline;">+39 338 3956240 ↗</a>
+            </span>
           </div>
 
         </form>
@@ -528,49 +668,6 @@
     </div>
   </footer>
 
-  <script>
-    function toggleMobileMenu() {
-      const nav = document.getElementById("navLinks");
-      if (nav) {
-        nav.style.display = nav.style.display === "flex" ? "none" : "flex";
-        if (nav.style.display === "flex") {
-          nav.style.flexDirection = "column";
-          nav.style.position = "absolute";
-          nav.style.top = "100%";
-          nav.style.left = "0";
-          nav.style.right = "0";
-          nav.style.background = "#1C1C24";
-          nav.style.padding = "1.5rem";
-        }
-      }
-    }
-
-    async function handleLeadSubmit(event) {
-      event.preventDefault();
-      const btn = document.getElementById("btnSubmitLead");
-      const msg = document.getElementById("formSuccessMessage");
-
-      btn.disabled = true;
-      btn.textContent = "⏳ Invio in corso...";
-
-      const leadData = {
-        name: document.getElementById("ownerName").value,
-        phone: document.getElementById("ownerPhone").value,
-        email: document.getElementById("ownerEmail").value,
-        zone: document.getElementById("ownerZone").value,
-        type: document.getElementById("ownerType").value,
-        state: document.getElementById("ownerState").value,
-        notes: document.getElementById("ownerNotes").value,
-        timestamp: new Date().toISOString()
-      };
-
-      console.log("[LEAD SUBMITTED]:", leadData);
-
-      setTimeout(() => {
-        btn.style.display = "none";
-        msg.style.display = "block";
-      }, 700);
-    }
-  </script>
+  <script type="module" src="main.js"></script>
 </body>
 </html>

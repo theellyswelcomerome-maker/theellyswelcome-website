@@ -1,0 +1,8 @@
+# robots.txt for The Ellys' Welcome
+# https://theellyswelcome.com
+
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://theellyswelcome.com/sitemap.xml
