@@ -1,0 +1,24 @@
+# Regole di Cache e Security Headers per Cloudflare Pages
+# The Ellys' Welcome — https://theellyswelcome.com
+
+/*
+  X-Frame-Options: SAMEORIGIN
+  X-Content-Type-Options: nosniff
+  Referrer-Policy: strict-origin-when-cross-origin
+  Permissions-Policy: camera=(), microphone=(), geolocation=()
+  Strict-Transport-Security: max-age=31536000; includeSubDomains; preload
+
+# Cache immutabile a lungo termine per asset statici (immagini, logo)
+/assets/*
+  Cache-Control: public, max-age=31536000, immutable
+
+# Cache per fogli di stile e script
+/*.css
+  Cache-Control: public, max-age=86400, stale-while-revalidate=604800
+
+/*.js
+  Cache-Control: public, max-age=86400, stale-while-revalidate=604800
+
+# HTML: verifica rapida per aggiornamenti istantanei
+/index.html
+  Cache-Control: public, max-age=0, must-revalidate
