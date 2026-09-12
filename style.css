@@ -762,15 +762,33 @@ h1, h2, h3, h4, .font-serif {
   line-height: 1.5;
 }
 
-.dimora-cin-badge {
+.dimora-badges-wrap {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  align-items: center;
+  margin-top: 0.75rem;
+}
+
+.dimora-cin-badge,
+.dimora-compliance-badge {
   display: inline-block;
-  font-size: 0.75rem;
+  font-size: 0.72rem;
   font-weight: 700;
+  padding: 3px 8px;
+  border-radius: 4px;
+}
+
+.dimora-cin-badge {
   color: var(--burgundy);
   background: rgba(107, 30, 42, 0.08);
-  padding: 2px 8px;
-  border-radius: 4px;
-  margin-top: 0.75rem;
+  border: 1px solid rgba(107, 30, 42, 0.15);
+}
+
+.dimora-compliance-badge {
+  color: #1A5336;
+  background: rgba(16, 185, 129, 0.1);
+  border: 1px solid rgba(16, 185, 129, 0.25);
 }
 
 .dimora-airbnb-prompt {

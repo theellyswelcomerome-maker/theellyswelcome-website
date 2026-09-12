@@ -29,7 +29,9 @@
   <meta name="geo.position" content="41.8687;12.4497">
   <meta name="ICBM" content="41.8687, 12.4497">
 
-  <!-- Google Search Console: tag di verifica della proprietà del sito -->
+  <!-- Google Search Console: tag di verifica della proprietà del sito.
+       Sostituire 'GSC_VERIFICATION_TOKEN_PLACEHOLDER' con il token alfanumerico fornito da Search Console,
+       oppure verificare la proprietà a livello DNS tramite record TXT in Cloudflare DNS (consigliato per l'intero dominio). -->
   <meta name="google-site-verification" content="GSC_VERIFICATION_TOKEN_PLACEHOLDER">
 
   <!-- Favicon / Touch Icon & Theme Color -->
@@ -64,7 +66,14 @@
         "email": "theellyswelcomerome@gmail.com",
         "vatID": "IT18557821008",
         "taxID": "FRNGNN05R06I449E",
-        "identifier": "REA RM-1792299",
+        "identifier": [
+          {
+            "@type": "PropertyValue",
+            "propertyID": "REA",
+            "name": "Iscrizione Registro Imprese CCIAA Roma",
+            "value": "RM-1792299"
+          }
+        ],
         "priceRange": "€€",
         "address": {
           "@type": "PostalAddress",
@@ -84,6 +93,14 @@
           "@type": "City",
           "name": "Roma"
         },
+        "contactPoint": {
+          "@type": "ContactPoint",
+          "telephone": "+393383956240",
+          "contactType": "customer service",
+          "email": "theellyswelcomerome@gmail.com",
+          "areaServed": "IT",
+          "availableLanguage": ["Italian", "English"]
+        },
         "openingHoursSpecification": [
           {
             "@type": "OpeningHoursSpecification",
@@ -92,6 +109,33 @@
             "closes": "22:00"
           }
         ],
+        "containsPlace": [
+          { "@id": "https://theellyswelcome.com/#spacedom" },
+          { "@id": "https://theellyswelcome.com/#ellyshouse" },
+          { "@id": "https://theellyswelcome.com/#dipohouse" }
+        ],
+        "hasOfferCatalog": {
+          "@type": "OfferCatalog",
+          "name": "Servizi di Property Management e Dimore Turistiche a Roma",
+          "itemListElement": [
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "Property Management & Gestione Alloggi Turistici",
+                "description": "Verifica di conformità urbanistica e catastale, predisposizione SCIA (Segnalazione Certificata di Inizio Attività) al SUAR di Roma Capitale, rilascio CIN ministeriale e gestione Alloggiati Web, ROSS 1000 e GECOS."
+              }
+            },
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "Locazioni Turistiche e Dimore Esclusive a Roma",
+                "description": "Soggiorni autentici in dimore selezionate nel centro di Roma con assistenza dedicata H24 e standard qualitativi verificati."
+              }
+            }
+          ]
+        },
         "aggregateRating": {
           "@type": "AggregateRating",
           "ratingValue": "4.96",
@@ -115,11 +159,22 @@
         "@id": "https://theellyswelcome.com/#spacedom",
         "name": "Space Dom",
         "description": "Attico con travi a vista nel cuore di Roma a Via del Governo Vecchio (Piazza Navona). Struttura conforme con SCIA e CIN ministeriale.",
+        "containedInPlace": {
+          "@id": "https://theellyswelcome.com/#business"
+        },
         "occupancy": {
           "@type": "QuantitativeValue",
           "maxValue": 6
         },
-        "identifier": "IT058091C2OP2KNH3C",
+        "identifier": [
+          "IT058091C2OP2KNH3C",
+          {
+            "@type": "PropertyValue",
+            "propertyID": "CIN",
+            "name": "Codice Identificativo Nazionale",
+            "value": "IT058091C2OP2KNH3C"
+          }
+        ],
         "address": {
           "@type": "PostalAddress",
           "streetAddress": "Via del Governo Vecchio",
@@ -139,11 +194,22 @@
         "@id": "https://theellyswelcome.com/#ellyshouse",
         "name": "Elly's House",
         "description": "Dimora curata e tranquilla nel quartiere residenziale di Monteverde, vicina a Trastevere. Struttura conforme con SCIA e CIN ministeriale.",
+        "containedInPlace": {
+          "@id": "https://theellyswelcome.com/#business"
+        },
         "occupancy": {
           "@type": "QuantitativeValue",
           "maxValue": 4
         },
-        "identifier": "IT058091C2AGXKMIKB",
+        "identifier": [
+          "IT058091C2AGXKMIKB",
+          {
+            "@type": "PropertyValue",
+            "propertyID": "CIN",
+            "name": "Codice Identificativo Nazionale",
+            "value": "IT058091C2AGXKMIKB"
+          }
+        ],
         "address": {
           "@type": "PostalAddress",
           "streetAddress": "Via San Girolamo Emiliani",
@@ -163,11 +229,22 @@
         "@id": "https://theellyswelcome.com/#dipohouse",
         "name": "Dipo House",
         "description": "Trilocale moderno e luminoso nel quartiere Marconi, polo Roma Tre e Stazione Trastevere. Struttura conforme con SCIA e CIN ministeriale.",
+        "containedInPlace": {
+          "@id": "https://theellyswelcome.com/#business"
+        },
         "occupancy": {
           "@type": "QuantitativeValue",
           "maxValue": 4
         },
-        "identifier": "IT058091C24OKKNEHK",
+        "identifier": [
+          "IT058091C24OKKNEHK",
+          {
+            "@type": "PropertyValue",
+            "propertyID": "CIN",
+            "name": "Codice Identificativo Nazionale",
+            "value": "IT058091C24OKKNEHK"
+          }
+        ],
         "address": {
           "@type": "PostalAddress",
           "streetAddress": "Via Quirino Majorana",
@@ -506,7 +583,10 @@
               <p class="dimora-desc">
                 Attico mansardato con travi a vista in legno, camino d'epoca, ampi spazi luminosi e affacci suggestivi nel cuore del centro storico di Roma.
               </p>
-              <div class="dimora-cin-badge">CIN: IT058091C2OP2KNH3C</div>
+              <div class="dimora-badges-wrap">
+                <span class="dimora-cin-badge">CIN: IT058091C2OP2KNH3C</span>
+                <span class="dimora-compliance-badge">✓ SCIA Roma Capitale Conforme</span>
+              </div>
               <div class="dimora-airbnb-prompt">
                 <span>🔗 Clicca per vedere foto complete, disponibilità e recensioni su Airbnb ↗</span>
               </div>
@@ -537,7 +617,10 @@
               <p class="dimora-desc">
                 L'appartamento originario di Eleonora. Tranquillità residenziale a Monteverde, ottimamente collegato con la Stazione Trastevere e il centro.
               </p>
-              <div class="dimora-cin-badge">CIN: IT058091C2AGXKMIKB</div>
+              <div class="dimora-badges-wrap">
+                <span class="dimora-cin-badge">CIN: IT058091C2AGXKMIKB</span>
+                <span class="dimora-compliance-badge">✓ SCIA Roma Capitale Conforme</span>
+              </div>
               <div class="dimora-airbnb-prompt">
                 <span>🔗 Clicca per vedere foto complete, disponibilità e recensioni su Airbnb ↗</span>
               </div>
@@ -568,7 +651,10 @@
               <p class="dimora-desc">
                 Trilocale moderno e luminoso nel quartiere Marconi, arredato con cura e dotato di ogni comfort a breve distanza dalla Stazione Trastevere.
               </p>
-              <div class="dimora-cin-badge">CIN: IT058091C24OKKNEHK</div>
+              <div class="dimora-badges-wrap">
+                <span class="dimora-cin-badge">CIN: IT058091C24OKKNEHK</span>
+                <span class="dimora-compliance-badge">✓ SCIA Roma Capitale Conforme</span>
+              </div>
               <div class="dimora-airbnb-prompt">
                 <span>🔗 Clicca per vedere foto complete, disponibilità e recensioni su Airbnb ↗</span>
               </div>
@@ -710,7 +796,8 @@
           <p style="margin-bottom: 0.4rem;">📍 <strong>Presidio Fisico:</strong> <a href="https://maps.google.com/?q=Via+Edoardo+Jenner+119+Roma" target="_blank" rel="noopener noreferrer" style="color: var(--alabaster); text-decoration: none;">Via Edoardo Jenner, 119 - Int. 36, 00151 Roma (RM) ↗</a></p>
           <p style="margin-bottom: 0.4rem;">📞 <strong>Telefono / WhatsApp:</strong> <a href="tel:+393383956240" style="color: var(--alabaster); text-decoration: none;">+39 338 3956240</a></p>
           <p style="margin-bottom: 0.4rem;">✉️ <strong>Email:</strong> <a href="mailto:theellyswelcomerome@gmail.com" style="color: var(--gold-light); text-decoration: none;">theellyswelcomerome@gmail.com</a></p>
-          <p>🔒 <strong>PEC:</strong> <a href="mailto:giovanni.fiorino@arubapec.it" style="color: var(--text-light-muted); text-decoration: none;">giovanni.fiorino@arubapec.it</a></p>
+          <p style="margin-bottom: 0.4rem;">🔒 <strong>PEC:</strong> <a href="mailto:giovanni.fiorino@arubapec.it" style="color: var(--text-light-muted); text-decoration: none;">giovanni.fiorino@arubapec.it</a></p>
+          <p style="font-size: 0.82rem; color: var(--gold-light); margin-top: 0.45rem;">🕒 <strong>Orari:</strong> Lun - Dom 08:00 - 22:00 (Reperibilità Emergenze H24)</p>
         </div>
 
         <div>
