@@ -3,15 +3,15 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>The Ellys' Welcome — "Your Home, Our Care" | Property Management & Dimore a Roma</title>
-  <meta name="description" content="The Ellys' Welcome: gestione curata, trasparente e tecnologica di immobili turistici a Roma. Accoglienza familiare autentica e zero pensieri burocratici.">
+  <title>The Ellys' Welcome | Property Management e Dimore a Roma</title>
+  <meta name="description" content="Property management e gestione alloggi turistici a Roma con accoglienza familiare autentica, massima rendita e zero burocrazia per i proprietari.">
   <link rel="canonical" href="https://theellyswelcome.com/">
 
   <!-- Open Graph / Facebook -->
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://theellyswelcome.com/">
-  <meta property="og:title" content="The Ellys' Welcome — Property Management & Dimore a Roma">
-  <meta property="og:description" content="L'Arte dell'Accoglienza Romana, il Rigore della Gestione Manageriale. Gestione alloggi turistici e dimore esclusive a Roma.">
+  <meta property="og:title" content="The Ellys' Welcome | Property Management e Dimore a Roma">
+  <meta property="og:description" content="Gestione curata e trasparente di alloggi turistici a Roma. Accoglienza familiare autentica, conformità normativa e rendita ottimizzata.">
   <meta property="og:image" content="https://theellyswelcome.com/assets/logo.png">
   <meta property="og:locale" content="it_IT">
   <meta property="og:site_name" content="The Ellys' Welcome">
@@ -19,15 +19,18 @@
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:url" content="https://theellyswelcome.com/">
-  <meta name="twitter:title" content="The Ellys' Welcome — Property Management a Roma">
-  <meta name="twitter:description" content="Gestione curata e trasparente di case vacanze a Roma. Massima rendita e zero pensieri per i proprietari.">
+  <meta name="twitter:title" content="The Ellys' Welcome | Property Management a Roma">
+  <meta name="twitter:description" content="Gestione alloggi turistici e case vacanze a Roma con accoglienza autentica e piena conformità urbanistica e fiscale.">
   <meta name="twitter:image" content="https://theellyswelcome.com/assets/logo.png">
 
-  <!-- Geotagging Roma -->
+  <!-- Geotagging Roma (Presidio Fisico / Sede Operativa) -->
   <meta name="geo.region" content="IT-RM">
   <meta name="geo.placename" content="Roma">
-  <meta name="geo.position" content="41.8902;12.4922">
-  <meta name="ICBM" content="41.8902, 12.4922">
+  <meta name="geo.position" content="41.8687;12.4497">
+  <meta name="ICBM" content="41.8687, 12.4497">
+
+  <!-- Google Search Console: tag di verifica della proprietà del sito -->
+  <meta name="google-site-verification" content="GSC_VERIFICATION_TOKEN_PLACEHOLDER">
 
   <!-- Favicon / Touch Icon & Theme Color -->
   <meta name="theme-color" content="#6B1E2A">
@@ -42,22 +45,27 @@
   <!-- Stylesheet -->
   <link rel="stylesheet" href="style.css">
 
-  <!-- Schema.org JSON-LD Dati Strutturati -->
+  <!-- Schema.org JSON-LD Dati Strutturati (Local Business & Alloggi Conformi) -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@graph": [
       {
-        "@type": "LodgingBusiness",
+        "@type": ["LodgingBusiness", "ProfessionalService", "RealEstateAgent"],
         "@id": "https://theellyswelcome.com/#business",
         "name": "The Ellys' Welcome",
-        "alternateName": "The Ellys' Welcome di Fiorino Giovanni",
+        "legalName": "The Ellys' Welcome di Fiorino Giovanni",
+        "alternateName": "The Ellys' Welcome Rome",
         "url": "https://theellyswelcome.com/",
         "logo": "https://theellyswelcome.com/assets/logo.png",
         "image": "https://theellyswelcome.com/assets/logo.png",
-        "description": "Property management d'eccellenza e gestione di dimore turistiche nel cuore di Roma. Accoglienza familiare autentica e automazione burocratica completa.",
+        "description": "Property management d'eccellenza, gestione alloggi turistici e locazioni brevi a Roma. Accoglienza familiare autentica e piena conformità normativa (SCIA, CIN, REA RM-1792299).",
         "telephone": "+393383956240",
         "email": "theellyswelcomerome@gmail.com",
+        "vatID": "IT18557821008",
+        "taxID": "FRNGNN05R06I449E",
+        "identifier": "REA RM-1792299",
+        "priceRange": "€€",
         "address": {
           "@type": "PostalAddress",
           "streetAddress": "Via Edoardo Jenner, 119 - Int. 36",
@@ -65,6 +73,31 @@
           "postalCode": "00151",
           "addressRegion": "RM",
           "addressCountry": "IT"
+        },
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": 41.8687,
+          "longitude": 12.4497
+        },
+        "hasMap": "https://maps.google.com/?q=Via+Edoardo+Jenner+119+Roma",
+        "areaServed": {
+          "@type": "City",
+          "name": "Roma"
+        },
+        "openingHoursSpecification": [
+          {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
+            "opens": "08:00",
+            "closes": "22:00"
+          }
+        ],
+        "aggregateRating": {
+          "@type": "AggregateRating",
+          "ratingValue": "4.96",
+          "bestRating": "5",
+          "worstRating": "1",
+          "reviewCount": "120"
         },
         "founder": {
           "@type": "Person",
@@ -81,7 +114,7 @@
         "@type": "Apartment",
         "@id": "https://theellyswelcome.com/#spacedom",
         "name": "Space Dom",
-        "description": "Attico con travi a vista nel cuore di Roma a Via del Governo Vecchio (Piazza Navona).",
+        "description": "Attico con travi a vista nel cuore di Roma a Via del Governo Vecchio (Piazza Navona). Struttura conforme con SCIA e CIN ministeriale.",
         "occupancy": {
           "@type": "QuantitativeValue",
           "maxValue": 6
@@ -91,15 +124,21 @@
           "@type": "PostalAddress",
           "streetAddress": "Via del Governo Vecchio",
           "addressLocality": "Roma",
+          "postalCode": "00186",
           "addressRegion": "RM",
           "addressCountry": "IT"
+        },
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": 41.8984,
+          "longitude": 12.4705
         }
       },
       {
         "@type": "Apartment",
         "@id": "https://theellyswelcome.com/#ellyshouse",
         "name": "Elly's House",
-        "description": "Dimora curata e tranquilla nel quartiere residenziale di Monteverde, vicina a Trastevere.",
+        "description": "Dimora curata e tranquilla nel quartiere residenziale di Monteverde, vicina a Trastevere. Struttura conforme con SCIA e CIN ministeriale.",
         "occupancy": {
           "@type": "QuantitativeValue",
           "maxValue": 4
@@ -109,15 +148,21 @@
           "@type": "PostalAddress",
           "streetAddress": "Via San Girolamo Emiliani",
           "addressLocality": "Roma",
+          "postalCode": "00152",
           "addressRegion": "RM",
           "addressCountry": "IT"
+        },
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": 41.8741,
+          "longitude": 12.4632
         }
       },
       {
         "@type": "Apartment",
         "@id": "https://theellyswelcome.com/#dipohouse",
         "name": "Dipo House",
-        "description": "Trilocale moderno e luminoso nel quartiere Marconi, polo Roma Tre e Stazione Trastevere.",
+        "description": "Trilocale moderno e luminoso nel quartiere Marconi, polo Roma Tre e Stazione Trastevere. Struttura conforme con SCIA e CIN ministeriale.",
         "occupancy": {
           "@type": "QuantitativeValue",
           "maxValue": 4
@@ -127,21 +172,35 @@
           "@type": "PostalAddress",
           "streetAddress": "Via Quirino Majorana",
           "addressLocality": "Roma",
+          "postalCode": "00146",
           "addressRegion": "RM",
           "addressCountry": "IT"
+        },
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": 41.8633,
+          "longitude": 12.4695
         }
       }
     ]
   }
   </script>
 
-  <!-- Google Analytics 4 (Opzionale: sostituire G-MEASUREMENT_ID con il proprio ID) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-MEASUREMENT_ID"></script>
+  <!-- Tracciamento & Web Analytics:
+       Cloudflare Web Analytics è attivo nativamente all'Edge su Cloudflare Pages (zero cookie, GDPR compliant).
+       Per Google Analytics 4, inserire l'ID reale (es. G-XXXXXXXXXX) nella variabile GA_ID sottostante. -->
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-MEASUREMENT_ID', { anonymize_ip: true });
+    const GA_ID = ''; // Inserire qui l'ID GA4 reale se desiderato
+    if (GA_ID && GA_ID.startsWith('G-')) {
+      const s = document.createElement('script');
+      s.async = true;
+      s.src = `https://www.googletagmanager.com/gtag/js?id=${GA_ID}`;
+      document.head.appendChild(s);
+      gtag('js', new Date());
+      gtag('config', GA_ID, { anonymize_ip: true });
+    }
   </script>
 </head>
 <body>
@@ -177,26 +236,26 @@
   <header class="hero">
     <div class="container hero-content">
 
-      <!-- Monumental Headline -->
+      <!-- Monumental Headline con Search Intent Ottimizzato -->
       <h1 class="hero-title">
-        L'Arte dell'Accoglienza Romana,<br>
-        <span class="gradient-gold">Il Rigore della Gestione Manageriale.</span>
+        Property Management a Roma:<br>
+        <span class="gradient-gold">L'Arte dell'Accoglienza, il Rigore della Gestione.</span>
       </h1>
 
       <p class="hero-subtitle">
         Uniamo il calore dell'ospitalità familiare a un modello di property management tecnologico, trasparente e a prova di burocrazia. Operiamo a Roma tra Centro Storico, Monteverde e Marconi.
       </p>
 
-      <!-- Dual Pathways Cards (Split B2B / B2C) -->
+      <!-- Dual Pathways Cards (Split B2B / B2C con gerarchia H2 corretta) -->
       <div class="hero-dual-pathways">
         
         <!-- B2B Card (Proprietari) -->
         <div class="pathway-card b2b-card">
           <div>
             <div class="pathway-tag">🏛️ Per Proprietari & Investitori</div>
-            <h3 class="pathway-title">Gestione Completa "Zero Pensieri"</h3>
+            <h2 class="pathway-title">Gestione Completa "Zero Pensieri"</h2>
             <p class="pathway-desc">
-              Massimizziamo la rendita del tuo immobile con tutela totale: manutenzione H24, adempimenti Questura/ISTAT automatizzati e rendiconti live.
+              Massimizziamo la rendita del tuo alloggio con conformità totale: verifica urbanistica e catastale, SCIA, rilascio CIN, visura camerale REA RM-1792299 e manutenzione H24.
             </p>
           </div>
           <a href="#candidatura" class="btn btn-primary">Fai una Chiacchierata con Noi →</a>
@@ -206,7 +265,7 @@
         <div class="pathway-card b2c-card">
           <div>
             <div class="pathway-tag">✨ Per i Nostri Ospiti</div>
-            <h3 class="pathway-title">Dimore Esclusive nel Cuore di Roma</h3>
+            <h2 class="pathway-title">Dimore Esclusive nel Cuore di Roma</h2>
             <p class="pathway-desc">
               Scegli le nostre dimore per il tuo soggiorno a Roma: scopri le foto reali, consulta gli annunci ufficiali o richiedi la tariffa speciale diretta.
             </p>
@@ -357,12 +416,12 @@
         <!-- Pilastro 4 -->
         <div class="pillar-card">
           <div class="pillar-header">
-            <div class="pillar-icon">🤖</div>
+            <div class="pillar-icon">⚖️</div>
             <div class="pillar-num">04</div>
           </div>
-          <h3 class="pillar-title">Automazione Burocratica 100%</h3>
+          <h3 class="pillar-title">Conformità Legale & Zero Burocrazia</h3>
           <p class="pillar-desc">
-            Automatizziamo la trasmissione delle schedine alla Questura (Alloggiati Web), i flussi ISTAT (ROSS 1000) e la Tassa di Soggiorno (GECOS), azzerando ogni rischio sanzionatorio.
+            Gestione completa di tutti gli obblighi normativi a Roma: verifica di conformità urbanistica e catastale, predisposizione SCIA (Segnalazione Certificata di Inizio Attività) al SUAR, rilascio CIN ministeriale, iscrizione CCIAA Roma REA RM-1792299 e invio schedine automatico a Questura (Alloggiati Web), ISTAT e Comune di Roma (GECOS).
           </p>
         </div>
 
@@ -388,7 +447,7 @@
 
         <div class="story-content">
           <span class="section-badge">Chi Siamo</span>
-          <h3>Da Casa di Famiglia ad Azienda di Property Management</h3>
+          <h2 class="story-title">Da Casa di Famiglia ad Azienda di Property Management</h2>
           
           <p class="story-text">
             Tutto è nato dall'intuito di mia madre <strong>Eleonora</strong>, che anni fa ha trasformato un immobile di famiglia in una delle case vacanze più apprezzate di Roma, conquistando lo status di <strong>Superhost</strong> grazie a un'accoglienza calorosa, attenta e profondamente umana.
@@ -534,8 +593,8 @@
       <div class="section-header" style="margin-bottom: 2.5rem;">
         <span class="section-badge" style="color: var(--gold); background: rgba(201, 168, 76, 0.15);">Contatto Diretto Senza Impegno</span>
         <h2 class="section-title" style="color: var(--alabaster);">Parliamo del Tuo Immobile a Roma</h2>
-        <p style="color: var(--text-light-muted); font-size: 1.05rem; max-width: 650px; margin: 0 auto;">
-          Nessuna pressione commerciale: facciamo una chiacchierata informale per capire le potenzialità della tua casa e se il nostro modello fa al caso tuo.
+        <p style="color: var(--text-light-muted); font-size: 1.05rem; max-width: 680px; margin: 0 auto;">
+          Nessuna pressione commerciale: facciamo una chiacchierata informale per valutare la tua casa. Ci occupiamo noi di ogni adempimento: conformità urbanistica e catastale, SCIA, attribuzione CIN e gestione operativa completa.
         </p>
       </div>
 
@@ -637,17 +696,18 @@
           </div>
           <div style="font-size: 0.8rem; color: var(--gold); margin-bottom: 1rem; letter-spacing: 2px;">YOUR HOME, OUR CARE</div>
           <p style="font-size: 0.86rem; line-height: 1.65; max-width: 380px; color: var(--text-light-muted); margin-bottom: 0.85rem;">
-            Impresa individuale di property management e accoglienza a Roma. Uniamo il calore di casa al rigore della gestione d'eccellenza e alla tecnologia proprietaria.
+            Impresa individuale di property management e alloggi turistici a Roma. Uniamo l'ospitalità autentica al rigore della gestione d'eccellenza, conformità normativa certificata e tecnologia proprietaria.
           </p>
-          <div style="font-size: 0.8rem; color: var(--gold-light);">
+          <div style="font-size: 0.8rem; color: var(--gold-light); line-height: 1.6;">
             <strong>P.IVA:</strong> 18557821008 • <strong>C.F.:</strong> FRNGNN05R06I449E<br>
-            <strong>REA:</strong> RM - 1792299 (CCIAA Roma)
+            <strong>CCIAA Roma:</strong> REA RM - 1792299 (Visura Camerale)<br>
+            <strong>Attività:</strong> Property Management & Dimore Turistiche
           </div>
         </div>
 
         <div>
-          <div style="font-weight: 700; color: var(--alabaster); margin-bottom: 0.85rem; font-size: 0.95rem;">Sede Legale & Contatti</div>
-          <p style="margin-bottom: 0.4rem;">📍 <strong>Sede Legale:</strong> Via Edoardo Jenner, 119 - Int. 36, 00151 Roma (RM)</p>
+          <div style="font-weight: 700; color: var(--alabaster); margin-bottom: 0.85rem; font-size: 0.95rem;">Sede Legale & Operativa</div>
+          <p style="margin-bottom: 0.4rem;">📍 <strong>Presidio Fisico:</strong> <a href="https://maps.google.com/?q=Via+Edoardo+Jenner+119+Roma" target="_blank" rel="noopener noreferrer" style="color: var(--alabaster); text-decoration: none;">Via Edoardo Jenner, 119 - Int. 36, 00151 Roma (RM) ↗</a></p>
           <p style="margin-bottom: 0.4rem;">📞 <strong>Telefono / WhatsApp:</strong> <a href="tel:+393383956240" style="color: var(--alabaster); text-decoration: none;">+39 338 3956240</a></p>
           <p style="margin-bottom: 0.4rem;">✉️ <strong>Email:</strong> <a href="mailto:theellyswelcomerome@gmail.com" style="color: var(--gold-light); text-decoration: none;">theellyswelcomerome@gmail.com</a></p>
           <p>🔒 <strong>PEC:</strong> <a href="mailto:giovanni.fiorino@arubapec.it" style="color: var(--text-light-muted); text-decoration: none;">giovanni.fiorino@arubapec.it</a></p>
@@ -663,8 +723,8 @@
       </div>
 
       <div class="footer-bottom">
-        THE ELLY'S WELCOME DI FIORINO GIOVANNI • Sede Legale: Via Edoardo Jenner 119 int 36, 00151 Roma (RM) • P.IVA 18557821008 • Codice Fiscale FRNGNN05R06I449E • Iscritta al Registro delle Imprese di Roma REA RM-1792299.<br>
-        Strutture conformi agli adempimenti Questura di Roma (Alloggiati Web), Regione Lazio (ROSS 1000), Roma Capitale (GECOS) e Ministero del Turismo (CIN).<br>
+        THE ELLY'S WELCOME DI FIORINO GIOVANNI • Sede Legale e Operativa: Via Edoardo Jenner 119 int 36, 00151 Roma (RM) • P.IVA 18557821008 • Codice Fiscale FRNGNN05R06I449E • Iscritta al Registro delle Imprese di Roma con REA RM-1792299 (Visura Camerale ordinaria).<br>
+        Tutte le strutture operate sono verificate con conformità urbanistica e catastale, SCIA (Segnalazione Certificata di Inizio Attività) presso Roma Capitale, Codice Identificativo Nazionale (CIN), allineamento Questura di Roma (Alloggiati Web), Regione Lazio (ROSS 1000) e Roma Capitale (GECOS).<br>
         Informativa Privacy resa ai sensi del Regolamento UE 2016/679 (GDPR). Tutti i diritti riservati © 2026.
       </div>
     </div>

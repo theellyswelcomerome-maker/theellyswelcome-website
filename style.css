@@ -639,6 +639,7 @@ h1, h2, h3, h4, .font-serif {
   color: var(--alabaster);
 }
 
+.story-content h2,
 .story-content h3 {
   font-size: 2.1rem;
   color: var(--burgundy);

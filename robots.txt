@@ -3,6 +3,7 @@
 
 User-agent: *
 Allow: /
+Disallow: /preview_hero_options.html
 
 # Sitemap
 Sitemap: https://theellyswelcome.com/sitemap.xml
