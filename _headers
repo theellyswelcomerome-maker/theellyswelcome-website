@@ -19,6 +19,12 @@
 /*.js
   Cache-Control: public, max-age=86400, stale-while-revalidate=604800
 
-# HTML: verifica rapida per aggiornamenti istantanei
+# HTML: verifica rapida per aggiornamenti istantanei e indicizzazione esplicita
 /index.html
   Cache-Control: public, max-age=0, must-revalidate
+  X-Robots-Tag: all
+
+# Esclusione pagina di bozza/preview grafica
+/preview_hero_options.html
+  Cache-Control: no-cache
+  X-Robots-Tag: noindex, nofollow
