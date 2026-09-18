@@ -1690,47 +1690,36 @@ h3, h4, .pillar-title, .district-name, .portal-title {
   line-height: 1.6;
 }
 
-@media (max-width: 900px) {
-  .hero-split-grid, .hero-dual-pathways, .story-grid, .footer-grid, .faq-reassurance-grid {
+/* =========================================================================
+   SISTEMA RESPONSIVE INTEGRALE (MOBILE-FIRST & ZERO OVERFLOW)
+   ========================================================================= */
+
+/* Tablet & Monitor Compatti (<= 992px) */
+@media (max-width: 992px) {
+  .hero-split-grid {
     grid-template-columns: 1fr;
+    gap: 2.5rem;
   }
-  .hero {
-    padding: 5.5rem 0 3.5rem 0;
-    min-height: auto;
-  }
-  .hero-text-col {
-    text-align: center;
-  }
-  .hero-actions-row {
-    justify-content: center;
-  }
-  .hero-trust-pills {
-    align-items: center;
-  }
-  .hero-founder-card {
-    max-width: 380px;
-    margin: 1.5rem auto 0 auto;
-  }
-  .authority-grid {
+  .hero-dual-pathways {
     grid-template-columns: 1fr;
-    gap: 1.25rem;
+    gap: 1.5rem;
   }
-  .authority-stat-box {
-    border-right: none;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
-    padding-bottom: 1rem;
-  }
-  .authority-stat-box:last-child {
-    border-bottom: none;
-    padding-bottom: 0;
+  .story-grid {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
   }
   .pillars-grid {
     grid-template-columns: repeat(2, 1fr);
+    gap: 1.25rem;
+  }
+  .footer-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
   }
   .superhost-certificate {
     grid-template-columns: 1fr;
     gap: 2rem;
-    padding: 1.75rem 1.5rem;
+    padding: 2rem;
   }
   .superhost-badge-area {
     border-right: none;
@@ -1738,23 +1727,398 @@ h3, h4, .pillar-title, .district-name, .portal-title {
     border-bottom: 1px solid rgba(255, 255, 255, 0.08);
     padding-bottom: 1.75rem;
   }
+}
+
+/* Smartphone & Dispositivi Mobili (<= 768px) */
+@media (max-width: 768px) {
+  /* Respiro Container per Schermi Piccoli */
+  .container {
+    padding: 0 1.15rem;
+  }
+
+  /* Header & Navbar Mobile */
+  .navbar {
+    padding: 0.6rem 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+  }
+  .brand-logo img {
+    height: 38px;
+    width: auto;
+  }
+  .brand-name {
+    font-size: 0.95rem;
+    letter-spacing: 0.5px;
+  }
+  .brand-tagline {
+    font-size: 0.58rem;
+    letter-spacing: 1.5px;
+  }
+  .mobile-menu-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 42px;
+    height: 42px;
+    background: rgba(201, 168, 76, 0.1);
+    border: 1px solid rgba(201, 168, 76, 0.3);
+    border-radius: var(--radius-sm);
+    color: var(--gold-light);
+    font-size: 1.4rem;
+    cursor: pointer;
+    transition: all 0.2s ease;
+  }
+  .mobile-menu-btn:active {
+    transform: scale(0.94);
+    background: rgba(201, 168, 76, 0.2);
+  }
+
+  /* Menu Drawer a Tutto Schermo Mobile */
+  .nav-links {
+    display: none;
+    position: fixed;
+    top: 59px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(14, 14, 20, 0.97);
+    backdrop-filter: blur(24px);
+    -webkit-backdrop-filter: blur(24px);
+    flex-direction: column;
+    padding: 2.2rem 1.5rem;
+    gap: 0.75rem;
+    z-index: 9999;
+    border-top: 1px solid rgba(201, 168, 76, 0.35);
+    overflow-y: auto;
+  }
+  .nav-links.mobile-open {
+    display: flex;
+  }
+  .nav-links li {
+    width: 100%;
+  }
+  .nav-links .nav-link {
+    display: block;
+    font-size: 1.15rem;
+    font-weight: 600;
+    padding: 0.9rem 1.25rem;
+    text-align: center;
+    color: var(--alabaster);
+    border-radius: var(--radius-sm);
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    transition: all 0.2s ease;
+  }
+  .nav-links .nav-link:active,
+  .nav-links .nav-link:hover {
+    background: rgba(201, 168, 76, 0.15);
+    color: var(--gold-light);
+    border-color: rgba(201, 168, 76, 0.4);
+  }
+  .nav-links .nav-cta {
+    margin-top: 0.75rem;
+    background: linear-gradient(135deg, var(--gold) 0%, #B3913B 100%) !important;
+    color: #14141C !important;
+    font-weight: 800 !important;
+    padding: 1.1rem !important;
+    font-size: 1.05rem !important;
+    box-shadow: 0 4px 20px rgba(201, 168, 76, 0.4) !important;
+  }
+
+  /* Hero Mobile */
+  .hero {
+    min-height: auto;
+    padding: 3.5rem 0 2.5rem 0;
+  }
+  .hero-text-col {
+    text-align: left;
+  }
+  .hero-title {
+    font-size: clamp(1.75rem, 6.8vw, 2.25rem);
+    line-height: 1.22;
+    margin-bottom: 0.85rem;
+  }
+  .hero-subtitle {
+    font-size: 0.94rem;
+    line-height: 1.55;
+    margin-bottom: 1.25rem;
+  }
+  .hero-trust-pills {
+    gap: 0.55rem;
+    margin-bottom: 1.4rem;
+    width: 100%;
+  }
+  .hero-trust-pill-item {
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(201, 168, 76, 0.2);
+    border-radius: var(--radius-sm);
+    padding: 0.65rem 0.85rem;
+    font-size: 0.84rem;
+    line-height: 1.4;
+    display: flex;
+    align-items: flex-start;
+    gap: 0.65rem;
+  }
+  .hero-actions-row {
+    flex-direction: column;
+    gap: 0.75rem;
+    width: 100%;
+  }
+  .btn-hero {
+    width: 100%;
+    justify-content: center;
+    padding: 0.95rem 1rem;
+    font-size: 0.95rem;
+  }
+
+  /* Visual Card Fondatore Mobile */
+  .hero-founder-card {
+    max-width: 100%;
+    width: 100%;
+    margin: 1.25rem auto 0 auto;
+    border-radius: var(--radius-md);
+  }
+  .hero-founder-img-wrap {
+    aspect-ratio: 4 / 4.6;
+  }
+  .hero-founder-badge {
+    bottom: 0.65rem;
+    left: 0.65rem;
+    right: 0.65rem;
+    padding: 0.75rem 0.9rem;
+  }
+  .hero-founder-name {
+    font-size: 1.05rem;
+  }
+  .hero-founder-title {
+    font-size: 0.78rem;
+    margin-bottom: 0.35rem;
+  }
+  .hero-founder-quote {
+    font-size: 0.78rem;
+    line-height: 1.35;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+
+  /* Authority Stats Strip Mobile */
+  .authority-strip {
+    padding: 1.25rem 0;
+  }
+  .authority-grid {
+    grid-template-columns: 1fr;
+    gap: 0.75rem;
+  }
+  .authority-stat-box {
+    border-right: none;
+    border: 1px solid rgba(201, 168, 76, 0.2);
+    background: rgba(255, 255, 255, 0.03);
+    border-radius: var(--radius-sm);
+    padding: 0.85rem 1rem;
+  }
+  .authority-stat-box:last-child {
+    border-right: 1px solid rgba(201, 168, 76, 0.2);
+  }
+  .authority-num {
+    font-size: 1.7rem;
+    margin-bottom: 0.2rem;
+  }
+  .authority-label {
+    font-size: 0.78rem;
+    letter-spacing: 0.5px;
+  }
+
+  /* Due Portali d'Accesso Mobile */
+  .dimore-section {
+    padding: 3.5rem 0;
+  }
+  .portal-card {
+    padding: 1.4rem 1.25rem;
+  }
+  .portal-title {
+    font-size: 1.22rem;
+  }
+  .portal-features-list {
+    gap: 0.5rem;
+    margin-bottom: 1.25rem;
+  }
+  .portal-feature-item {
+    font-size: 0.82rem;
+  }
+  .portal-cta-btn {
+    padding: 0.85rem 1rem;
+    font-size: 0.88rem;
+  }
+
+  /* 4 Pilastri & Quartieri Mobile */
+  .section-b2b {
+    padding: 4rem 0;
+  }
+  .pillars-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+  .pillar-card-square {
+    min-height: auto;
+    padding: 1.5rem 1.25rem;
+  }
+  .districts-section {
+    padding: 4rem 0;
+  }
+  .districts-grid {
+    grid-template-columns: 1fr;
+    gap: 0.85rem;
+  }
+  .district-card {
+    min-height: auto;
+    padding: 1.35rem 1.2rem;
+  }
+
+  /* Form Candidatura Mobile */
+  .contact-section {
+    padding: 4rem 0 3rem 0;
+  }
+  .form-card {
+    padding: 1.5rem 1.15rem;
+  }
   .form-grid {
     grid-template-columns: 1fr;
+    gap: 1rem;
   }
   .form-group.full {
     grid-column: span 1;
   }
-  .nav-links {
-    display: none;
+  .form-control {
+    font-size: 16px !important; /* Previene auto-zoom su iOS Safari */
+    padding: 0.85rem 1rem;
+    min-height: 48px;
   }
-  .mobile-menu-btn {
-    display: block;
+  #btnSubmitLead {
+    width: 100%;
+    min-height: 52px;
+    font-size: 1rem;
+    padding: 1rem;
   }
-}
 
-@media (max-width: 600px) {
-  .pillars-grid {
+  /* Dimore Cards Mobile */
+  .dimore-grid {
     grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  .dimora-img-wrap {
+    height: 200px;
+  }
+  .dimora-body {
+    padding: 1.25rem 1.15rem;
+  }
+  .dimora-title {
+    font-size: 1.25rem;
+  }
+  .dimora-features {
+    flex-wrap: wrap;
+    gap: 0.4rem 0.75rem;
+    font-size: 0.8rem;
+  }
+  .dimora-direct-btn {
+    padding: 0.9rem;
+    font-size: 0.86rem;
+    width: 100%;
+  }
+
+  /* Certificato Superhost Mobile */
+  .superhost-certificate {
+    padding: 1.5rem 1.15rem;
+  }
+  .superhost-big-number {
+    font-size: 2.6rem;
+  }
+  .superhost-hosts-list {
+    flex-direction: column;
+    gap: 0.65rem;
+  }
+  .superhost-host-item {
+    width: 100%;
+  }
+
+  /* Storia & Fondatore Mobile */
+  .story-section {
+    padding: 4rem 0 3rem 0;
+  }
+  .story-image-wrap {
+    max-width: 320px;
+    margin: 0 auto;
+  }
+  .story-badge-floating {
+    bottom: 0.75rem;
+    left: 0.75rem;
+    right: 0.75rem;
+    padding: 0.75rem 0.9rem;
+  }
+  .story-badge-name {
+    font-size: 1.05rem;
+  }
+  .story-badge-desc {
+    font-size: 0.78rem;
+  }
+  .story-content h2,
+  .story-content h3 {
+    font-size: 1.6rem;
+  }
+
+  /* FAQ Mobile */
+  .faq-section {
+    padding: 4rem 0;
+  }
+  .faq-cta-finale {
+    padding: 4rem 0 3rem 0;
+  }
+  .faq-reassurance-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+  .faq-cta-actions {
+    flex-direction: column;
+    gap: 0.75rem;
+    width: 100%;
+  }
+  .faq-cta-actions .btn {
+    width: 100%;
+    text-align: center;
+  }
+  .faq-question {
+    padding: 1rem 1.15rem;
+    font-size: 0.95rem;
+  }
+  .faq-answer {
+    padding: 0 1.15rem;
+    font-size: 0.88rem;
+  }
+  .faq-item.active .faq-answer {
+    padding: 0.85rem 1.15rem 1.15rem 1.15rem;
+  }
+
+  /* Page Hero Sottopagine Mobile */
+  .page-hero {
+    padding: 4.5rem 0 3rem 0;
+  }
+  .page-hero-title {
+    font-size: clamp(1.7rem, 6vw, 2.2rem);
+  }
+  .page-hero-lead {
+    font-size: 0.95rem;
+  }
+
+  /* Footer Mobile */
+  .footer {
+    padding: 3.5rem 0 2rem 0;
+  }
+  .footer-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    text-align: left;
   }
 }
 

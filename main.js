@@ -13,22 +13,35 @@ document.addEventListener("DOMContentLoaded", () => {
  */
 export function toggleMobileMenu() {
   const nav = document.getElementById("navLinks");
+  const btn = document.querySelector(".mobile-menu-btn");
   if (!nav) return;
 
-  const isFlex = nav.style.display === "flex";
-  nav.style.display = isFlex ? "none" : "flex";
-
-  if (!isFlex) {
-    nav.style.flexDirection = "column";
-    nav.style.position = "absolute";
-    nav.style.top = "100%";
-    nav.style.left = "0";
-    nav.style.right = "0";
-    nav.style.background = "#1C1C24";
-    nav.style.padding = "1.5rem";
-    nav.style.borderBottom = "1px solid var(--border-gold)";
+  const isOpen = nav.classList.contains("mobile-open");
+  if (isOpen) {
+    nav.classList.remove("mobile-open");
+    if (btn) btn.textContent = "☰";
+    document.body.style.overflow = "";
+  } else {
+    nav.classList.add("mobile-open");
+    if (btn) btn.textContent = "✕";
+    document.body.style.overflow = "hidden";
   }
 }
+
+// Auto-chiusura menu mobile al click su qualsiasi link
+document.addEventListener("DOMContentLoaded", () => {
+  document.querySelectorAll(".nav-link").forEach(link => {
+    link.addEventListener("click", () => {
+      const nav = document.getElementById("navLinks");
+      const btn = document.querySelector(".mobile-menu-btn");
+      if (nav && nav.classList.contains("mobile-open")) {
+        nav.classList.remove("mobile-open");
+        if (btn) btn.textContent = "☰";
+        document.body.style.overflow = "";
+      }
+    });
+  });
+});
 
 /**
  * Gestione invio lead proprietario tramite Cloudflare Pages Function /api/lead
