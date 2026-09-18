@@ -49,18 +49,58 @@ html {
 }
 
 body {
-  font-family: 'Outfit', sans-serif;
+  font-family: 'Outfit', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
   background-color: var(--alabaster);
   color: var(--text-dark);
-  line-height: 1.6;
+  line-height: 1.65;
+  letter-spacing: 0;
   overflow-x: hidden;
 }
 
-/* Tipografia */
-h1, h2, h3, h4, .font-serif {
-  font-family: 'Cinzel', serif;
+button, input, select, textarea {
+  font-family: inherit;
+}
+
+/* Tipografia Raffinata ed Elegante */
+h1, .hero-title, .page-hero-title, h2, .section-title {
+  font-family: 'Playfair Display', Georgia, serif;
   font-weight: 700;
-  letter-spacing: 0.8px;
+  letter-spacing: -0.01em;
+  line-height: 1.25;
+}
+
+h3, h4, .pillar-title, .district-name, .portal-title {
+  font-family: 'Outfit', sans-serif;
+  font-weight: 700;
+  letter-spacing: 0;
+  line-height: 1.35;
+}
+
+.font-roman,
+.brand-name,
+.pillar-num-watermark {
+  font-family: 'Cinzel', serif;
+  letter-spacing: 1.5px;
+}
+
+.authority-num {
+  font-family: 'Outfit', sans-serif;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+}
+
+.portal-tag,
+.section-badge,
+.superhost-tagline {
+  font-family: 'Outfit', sans-serif;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+}
+
+.dimora-location {
+  font-family: 'Outfit', sans-serif;
+  font-weight: 600;
+  letter-spacing: 0.5px;
 }
 
 .font-accent {
@@ -103,6 +143,11 @@ h1, h2, h3, h4, .font-serif {
   align-items: center;
   gap: 0.75rem;
   text-decoration: none;
+}
+
+.brand-logo picture {
+  display: flex;
+  align-items: center;
 }
 
 .brand-logo img {
@@ -175,34 +220,52 @@ h1, h2, h3, h4, .font-serif {
 }
 
 /* =========================================================================
-   HERO SECTION
+   HERO SECTION (VOLTO UMANO, FIDUCIA & DUE PORTALI D'ACCESSO)
    ========================================================================= */
 .hero {
   position: relative;
-  min-height: 88vh;
-  padding: 7.5rem 0 4.5rem 0;
-  background: radial-gradient(circle at 50% 30%, rgba(107, 30, 42, 0.62) 0%, rgba(20, 10, 14, 0.98) 85%),
+  min-height: calc(100vh - 72px);
+  padding: 3.6rem 0 2.6rem 0;
+  background: radial-gradient(circle at 65% 30%, rgba(107, 30, 42, 0.65) 0%, rgba(18, 10, 14, 0.98) 85%),
               url('https://images.unsplash.com/photo-1552832230-c0197dd311b5?q=80&w=1920&auto=format&fit=crop') center/cover no-repeat;
   display: flex;
   align-items: center;
   color: var(--alabaster);
-  text-align: center;
 }
 
-.hero-content {
-  max-width: 960px;
-  margin: 0 auto;
+.hero-split-grid {
+  display: grid;
+  grid-template-columns: 1.18fr 0.82fr;
+  gap: 3.5rem;
+  align-items: center;
   position: relative;
   z-index: 2;
+  width: 100%;
+}
+
+.hero-text-col {
+  text-align: left;
+}
+
+.hero-badge {
+  color: var(--gold-light);
+  background: rgba(201, 168, 76, 0.15);
+  border: 1px solid rgba(201, 168, 76, 0.35);
+  margin-bottom: 1.1rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.78rem;
+  padding: 5px 14px;
+  border-radius: 50px;
 }
 
 .hero-title {
-  font-size: clamp(2.2rem, 4.5vw, 3.8rem);
-  font-weight: 800;
+  font-size: clamp(2rem, 3.4vw, 3rem);
+  font-weight: 700;
   line-height: 1.2;
-  margin-bottom: 1.2rem;
+  margin-bottom: 1rem;
   text-shadow: 0 4px 25px rgba(0,0,0,0.85);
-  word-spacing: 2px;
 }
 
 .hero-title .gradient-gold {
@@ -212,72 +275,343 @@ h1, h2, h3, h4, .font-serif {
 }
 
 .hero-subtitle {
-  font-size: clamp(1rem, 1.8vw, 1.2rem);
+  font-size: clamp(0.94rem, 1.35vw, 1.05rem);
   color: #E6E3DC;
   font-weight: 300;
-  max-width: 780px;
-  margin: 0 auto 2.5rem auto;
   line-height: 1.6;
+  margin-bottom: 1.35rem;
+  max-width: 640px;
 }
 
-/* Dual Pathways Cards in Hero */
+.hero-trust-pills {
+  display: flex;
+  flex-direction: column;
+  gap: 0.55rem;
+  margin-bottom: 1.6rem;
+}
+
+.hero-trust-pill-item {
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+  font-size: 0.88rem;
+  color: #ECEAF2;
+}
+
+.hero-trust-pill-icon {
+  font-size: 1rem;
+  color: var(--gold);
+}
+
+.hero-actions-row {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.btn-hero {
+  padding: 0.9rem 1.5rem;
+  font-size: 0.92rem;
+}
+
+/* Visual Card del Fondatore nell'Hero */
+.hero-founder-card {
+  position: relative;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.65);
+  border: 2px solid rgba(201, 168, 76, 0.45);
+  background: #14141C;
+  transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+  max-width: 440px;
+  margin: 0 auto;
+}
+
+.hero-founder-card:hover {
+  transform: translateY(-4px);
+  border-color: var(--gold);
+  box-shadow: 0 30px 60px rgba(201, 168, 76, 0.25);
+}
+
+.hero-founder-img-wrap {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 4 / 4.9;
+  overflow: hidden;
+}
+
+.hero-founder-img-wrap picture,
+.hero-founder-img-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+  display: block;
+}
+
+.hero-founder-badge {
+  position: absolute;
+  bottom: 0.85rem;
+  left: 0.85rem;
+  right: 0.85rem;
+  background: rgba(14, 14, 20, 0.75);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(201, 168, 76, 0.4);
+  border-radius: var(--radius-sm);
+  padding: 0.85rem 1.05rem;
+  color: var(--alabaster);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.45);
+}
+
+.hero-founder-badge-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-bottom: 0.2rem;
+}
+
+.hero-founder-name {
+  font-family: 'Playfair Display', 'Cinzel', serif;
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--gold-light);
+}
+
+.hero-founder-rea {
+  font-size: 0.72rem;
+  color: var(--gold);
+  font-weight: 600;
+}
+
+.hero-founder-title {
+  font-size: 0.8rem;
+  color: #D4D1DC;
+  line-height: 1.35;
+  margin-bottom: 0.4rem;
+}
+
+.hero-founder-quote {
+  font-size: 0.8rem;
+  color: #ECEAF2;
+  font-style: italic;
+  line-height: 1.35;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  padding-top: 0.4rem;
+}
+
+/* =========================================================================
+   PORTALI D'ACCESSO HERO (DESIGN ARCHITETTONICO & AD ALTO VALORE)
+   ========================================================================= */
 .hero-dual-pathways {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 1.5rem;
   text-align: left;
-  margin-top: 1.5rem;
+  margin-top: 1.25rem;
 }
 
-.pathway-card {
-  background: rgba(28, 28, 36, 0.85);
-  backdrop-filter: blur(16px);
-  border: 1px solid var(--border-gold);
+.portal-card {
+  background: linear-gradient(145deg, rgba(26, 26, 36, 0.88) 0%, rgba(18, 14, 20, 0.94) 100%);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+  border: 1px solid rgba(201, 168, 76, 0.32);
   border-radius: var(--radius-md);
-  padding: 1.85rem;
+  padding: 1.75rem 1.85rem;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  transition: var(--transition);
-  box-shadow: 0 15px 35px rgba(0,0,0,0.5);
+  transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.5);
+  position: relative;
+  overflow: hidden;
 }
 
-.pathway-card:hover {
+.portal-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, var(--gold), transparent);
+  opacity: 0.7;
+}
+
+.portal-card:hover {
   transform: translateY(-4px);
   border-color: var(--gold);
-  box-shadow: 0 20px 40px rgba(0,0,0,0.7);
+  background: linear-gradient(145deg, rgba(32, 32, 44, 0.95) 0%, rgba(26, 18, 24, 0.98) 100%);
+  box-shadow: 0 20px 48px rgba(201, 168, 76, 0.22);
 }
 
-.pathway-card.b2b-card {
-  border-top: 4px solid var(--gold);
+.portal-header-meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.75rem;
 }
 
-.pathway-card.b2c-card {
-  border-top: 4px solid var(--airbnb-coral);
-}
-
-.pathway-tag {
-  font-size: 0.75rem;
-  font-weight: 700;
+.portal-tag {
+  font-family: 'Cinzel', serif;
+  font-size: 0.72rem;
+  font-weight: 800;
   text-transform: uppercase;
-  letter-spacing: 1.5px;
-  margin-bottom: 0.5rem;
+  letter-spacing: 2px;
 }
 
-.b2b-card .pathway-tag { color: var(--gold); }
-.b2c-card .pathway-tag { color: #FFA3A6; }
+.b2b-portal .portal-tag {
+  color: var(--gold);
+}
 
-.pathway-title {
-  font-size: 1.35rem;
-  margin-bottom: 0.65rem;
+.b2c-portal .portal-tag {
+  color: #FFA3A6;
+}
+
+.portal-status {
+  font-size: 0.72rem;
+  color: #A09DB0;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.portal-status-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #10B981;
+  box-shadow: 0 0 8px #10B981;
+}
+
+.portal-title {
+  font-size: 1.38rem;
+  margin-bottom: 0.85rem;
   color: var(--alabaster);
+  line-height: 1.28;
+  font-weight: 800;
 }
 
-.pathway-desc {
-  font-size: 0.9rem;
-  color: var(--text-light-muted);
+.portal-features-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.55rem;
   margin-bottom: 1.5rem;
-  line-height: 1.5;
+}
+
+.portal-feature-item {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+  font-size: 0.86rem;
+  color: #DCD8E6;
+  line-height: 1.4;
+}
+
+.portal-feature-icon {
+  font-size: 0.95rem;
+  color: var(--gold);
+  flex-shrink: 0;
+}
+
+.portal-cta-btn {
+  width: 100%;
+  padding: 0.9rem 1.4rem;
+  font-size: 0.92rem;
+  border-radius: var(--radius-sm);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-weight: 700;
+  text-decoration: none;
+  transition: all 0.25s ease;
+}
+
+/* =========================================================================
+   AUTHORITY STATS STRIP (METRICHE REALI & FIDUCIA)
+   ========================================================================= */
+.authority-strip {
+  background: #121218;
+  border-bottom: 1px solid rgba(201, 168, 76, 0.25);
+  padding: 1.75rem 0;
+}
+
+.authority-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  text-align: center;
+}
+
+.authority-stat-box {
+  border-right: 1px solid rgba(255, 255, 255, 0.08);
+  padding: 0 1rem;
+}
+
+.authority-stat-box:last-child {
+  border-right: none;
+}
+
+.authority-stat-link {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  color: inherit;
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  cursor: pointer;
+  border-radius: var(--radius-sm);
+  padding: 0.4rem 1rem;
+}
+
+.authority-stat-link:hover {
+  background: rgba(201, 168, 76, 0.1);
+  transform: translateY(-2px);
+}
+
+.authority-stat-link:hover .authority-num {
+  color: var(--gold);
+  text-shadow: 0 0 12px rgba(201, 168, 76, 0.4);
+}
+
+.authority-external-icon {
+  font-size: 1.05rem;
+  margin-left: 0.3rem;
+  opacity: 0.8;
+  transition: transform 0.2s ease;
+}
+
+.authority-stat-link:hover .authority-external-icon {
+  transform: translate(2px, -2px);
+  opacity: 1;
+}
+
+.authority-stat-sub {
+  display: block;
+  font-size: 0.74rem;
+  color: var(--gold-light);
+  margin-top: 0.3rem;
+  text-transform: none;
+  letter-spacing: 0;
+  font-weight: 500;
+}
+
+.authority-num {
+  font-family: 'Outfit', sans-serif;
+  font-size: 2.1rem;
+  font-weight: 800;
+  color: var(--gold-light);
+  line-height: 1.1;
+  margin-bottom: 0.25rem;
+  letter-spacing: -0.02em;
+}
+
+.authority-label {
+  font-size: 0.82rem;
+  color: #C0BDC8;
+  text-transform: uppercase;
+  letter-spacing: 1px;
 }
 
 .btn {
@@ -415,82 +749,175 @@ h1, h2, h3, h4, .font-serif {
   color: var(--text-light-muted);
 }
 
-.airbnb-hub-card {
+/* =========================================================================
+   CERTIFICATO DI ECCELLENZA SUPERHOST AIRBNB (AUTENTICO & AUTOREVOLE)
+   ========================================================================= */
+.superhost-certificate {
   grid-column: 1 / -1;
-  background: radial-gradient(circle at 50% 50%, rgba(107, 30, 42, 0.35) 0%, rgba(35, 35, 46, 0.95) 80%);
-  border: 1px solid var(--border-gold);
+  background: linear-gradient(145deg, #181822 0%, #101016 100%);
+  border: 1px solid rgba(201, 168, 76, 0.35);
   border-radius: var(--radius-md);
-  padding: 1.75rem 2rem;
-  display: flex;
-  justify-content: space-between;
+  padding: 2.2rem 2.4rem;
+  display: grid;
+  grid-template-columns: 1.1fr 1fr;
+  gap: 2.5rem;
   align-items: center;
-  flex-wrap: wrap;
-  gap: 1.5rem;
-  margin-top: 1rem;
-  transition: var(--transition);
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.55);
+  position: relative;
+  overflow: hidden;
+  margin-top: 1.5rem;
 }
 
-.airbnb-hub-card:hover {
-  border-color: var(--gold);
-  box-shadow: 0 15px 35px rgba(201, 168, 76, 0.15);
+.superhost-certificate::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, var(--gold), transparent);
 }
 
-.airbnb-hub-left {
-  display: flex;
-  align-items: center;
-  gap: 1.2rem;
+.superhost-badge-area {
+  border-right: 1px solid rgba(255, 255, 255, 0.08);
+  padding-right: 2rem;
 }
 
-.airbnb-hub-icon {
-  font-size: 2.2rem;
-  color: var(--airbnb-coral);
-}
-
-.airbnb-hub-title {
+.superhost-tagline {
   font-family: 'Cinzel', serif;
-  font-size: 1.15rem;
-  font-weight: 700;
+  font-size: 0.75rem;
+  color: var(--gold);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 0.5rem;
+}
+
+.superhost-score-wrap {
+  display: flex;
+  align-items: baseline;
+  gap: 0.75rem;
+  margin-bottom: 0.5rem;
+}
+
+.superhost-score-link {
+  text-decoration: none;
+  cursor: pointer;
+  transition: transform 0.25s ease, opacity 0.25s ease;
+  display: inline-flex;
+}
+
+.superhost-score-link:hover {
+  transform: translateY(-2px);
+  opacity: 0.95;
+}
+
+.superhost-score-link:hover .superhost-big-number {
+  color: var(--gold-light);
+}
+
+.superhost-big-number {
+  font-family: 'Outfit', sans-serif;
+  font-size: 3.2rem;
+  font-weight: 800;
+  color: var(--alabaster);
+  line-height: 1;
+  letter-spacing: -0.02em;
+  transition: color 0.2s ease;
+}
+
+.superhost-stars {
+  color: var(--gold-light);
+  font-size: 1.25rem;
+  letter-spacing: 3px;
+}
+
+.superhost-rating-desc {
+  font-size: 0.88rem;
+  color: #D4D1DC;
+  margin-bottom: 1.35rem;
+}
+
+.superhost-hosts-list {
+  display: flex;
+  gap: 1.25rem;
+  flex-wrap: wrap;
+}
+
+.superhost-host-item {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+  text-decoration: none;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(201, 168, 76, 0.25);
+  padding: 0.5rem 0.85rem;
+  border-radius: var(--radius-sm);
+  transition: all 0.25s ease;
+}
+
+.superhost-host-item:hover {
+  border-color: var(--gold);
+  background: rgba(201, 168, 76, 0.1);
+  transform: translateY(-2px);
+}
+
+.superhost-avatar-badge {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: var(--burgundy);
+  color: var(--gold);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 800;
+  font-size: 0.82rem;
+  border: 1px solid var(--gold);
+}
+
+.superhost-host-info strong {
+  display: block;
+  font-size: 0.82rem;
   color: var(--alabaster);
 }
 
-.airbnb-hub-sub {
-  font-size: 0.85rem;
-  color: var(--text-light-muted);
+.superhost-host-info span {
+  font-size: 0.72rem;
+  color: var(--gold-light);
 }
 
-.airbnb-hub-actions {
+.superhost-verbatim-area {
   display: flex;
-  gap: 0.85rem;
-  flex-wrap: wrap;
+  flex-direction: column;
+  gap: 1.15rem;
 }
 
-.btn-airbnb-hub {
-  background: rgba(255, 90, 95, 0.12);
-  border: 1px solid var(--airbnb-coral);
-  color: #FFA3A6;
-  padding: 0.65rem 1.25rem;
-  border-radius: var(--radius-sm);
-  font-size: 0.85rem;
-  font-weight: 700;
-  text-decoration: none;
-  display: inline-flex;
-  align-items: center;
-  gap: 0.45rem;
-  transition: var(--transition);
+.verbatim-item {
+  background: rgba(255, 255, 255, 0.03);
+  border-left: 2px solid var(--gold);
+  padding: 0.75rem 1rem;
+  border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
 }
 
-.btn-airbnb-hub:hover {
-  background: var(--airbnb-coral);
-  color: #FFFFFF;
-  transform: translateY(-2px);
-  box-shadow: 0 6px 20px rgba(255, 90, 95, 0.4);
+.verbatim-text {
+  font-size: 0.86rem;
+  color: #E2DFEB;
+  font-style: italic;
+  line-height: 1.5;
+  margin-bottom: 0.35rem;
+}
+
+.verbatim-author {
+  font-size: 0.75rem;
+  color: var(--gold);
+  font-weight: 600;
 }
 
 /* =========================================================================
-   B2B: I 4 PILASTRI (COMPATTI, QUADRATI & ALTO RISALTO)
+   B2B: I 4 PILASTRI (FORMATO QUADRATO & DESIGN GEOMETRICO)
    ========================================================================= */
 .section-b2b {
-  padding: 5rem 0;
+  padding: 6.5rem 0;
   background: var(--alabaster-warm);
   border-top: 1px solid var(--border-gold);
   border-bottom: 1px solid var(--border-gold);
@@ -499,11 +926,12 @@ h1, h2, h3, h4, .font-serif {
 .section-header {
   text-align: center;
   max-width: 820px;
-  margin: 0 auto 2.8rem auto;
+  margin: 0 auto 2.5rem auto;
 }
 
 .section-badge {
   display: inline-block;
+  font-family: 'Outfit', sans-serif;
   font-size: 0.75rem;
   font-weight: 700;
   color: var(--burgundy);
@@ -516,92 +944,102 @@ h1, h2, h3, h4, .font-serif {
 }
 
 .section-title {
-  font-size: clamp(1.9rem, 3vw, 2.5rem);
+  font-size: clamp(1.8rem, 3vw, 2.4rem);
   color: var(--burgundy);
-  margin-bottom: 0.85rem;
+  margin-bottom: 0.75rem;
 }
 
 .section-lead {
-  font-size: 1.02rem;
+  font-size: 1rem;
   color: var(--text-muted);
-  font-weight: 300;
-  line-height: 1.55;
+  font-weight: 400;
+  line-height: 1.6;
 }
 
 .pillars-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 1.35rem;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
 }
 
-.pillar-card {
+.pillar-card-square {
   background: #FFFFFF;
-  border: 2px solid var(--burgundy);
+  border: 1.5px solid rgba(107, 30, 42, 0.22);
   border-radius: var(--radius-md);
-  padding: 1.5rem 1.4rem;
-  box-shadow: 0 10px 25px rgba(107, 30, 42, 0.07);
-  transition: var(--transition);
-  position: relative;
-  overflow: hidden;
+  padding: 2.2rem 1.8rem;
+  box-shadow: 0 6px 22px rgba(0, 0, 0, 0.06);
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+  overflow: hidden;
+  min-height: 320px;
 }
 
-.pillar-card::before {
+.pillar-card-square::after {
   content: "";
   position: absolute;
-  top: 0;
+  bottom: 0;
   left: 0;
   right: 0;
-  height: 5px;
-  background: linear-gradient(90deg, var(--burgundy) 0%, var(--gold) 100%);
+  height: 3px;
+  background: linear-gradient(90deg, var(--burgundy), var(--gold));
+  opacity: 0;
+  transition: opacity 0.3s ease;
 }
 
-.pillar-card:hover {
+.pillar-card-square:hover {
   transform: translateY(-4px);
   border-color: var(--gold);
-  box-shadow: 0 16px 35px rgba(201, 168, 76, 0.2);
+  box-shadow: 0 16px 36px rgba(107, 30, 42, 0.14);
 }
 
-.pillar-header {
+.pillar-card-square:hover::after {
+  opacity: 1;
+}
+
+.pillar-top-row {
   display: flex;
-  align-items: center;
   justify-content: space-between;
-  margin-bottom: 0.85rem;
+  align-items: center;
 }
 
-.pillar-icon {
-  font-size: 1.8rem;
-}
-
-.pillar-num {
+.pillar-num-watermark {
   font-family: 'Cinzel', serif;
-  font-size: 0.8rem;
-  font-weight: 800;
-  color: var(--gold);
-  background: rgba(201, 168, 76, 0.15);
-  padding: 2px 8px;
-  border-radius: 4px;
+  font-size: 1.4rem;
+  font-weight: 900;
+  color: rgba(201, 168, 76, 0.6);
 }
 
-.pillar-title {
-  font-size: 1.12rem;
+.pillar-icon-wrap {
+  font-size: 1.75rem;
+}
+
+.pillar-mid-content {
+  margin: 0.95rem 0 0.5rem 0;
+}
+
+.pillar-card-square .pillar-title {
+  font-family: 'Outfit', sans-serif;
+  font-size: 1.18rem;
   color: var(--burgundy);
+  font-weight: 700;
+  line-height: 1.35;
   margin-bottom: 0.5rem;
-  font-weight: 800;
 }
 
-.pillar-desc {
-  font-size: 0.88rem;
-  color: var(--text-dark);
-  line-height: 1.5;
+.pillar-card-square .pillar-desc {
+  font-size: 0.92rem;
+  color: #4A4A55;
+  line-height: 1.6;
 }
 
 /* =========================================================================
-   STORYTELLING & FOUNDER BIO
+   STORYTELLING & FOUNDER BIO (MICRO-INTERAZIONI CURATE)
    ========================================================================= */
 .story-section {
-  padding: 5.5rem 0;
+  padding: 7rem 0 6rem 0;
   background: var(--alabaster);
 }
 
@@ -617,26 +1055,75 @@ h1, h2, h3, h4, .font-serif {
   border-radius: var(--radius-md);
   overflow: hidden;
   box-shadow: 0 20px 40px rgba(0,0,0,0.18);
-  border: 3px solid var(--burgundy);
+  border: 2px solid rgba(107, 30, 42, 0.35);
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.story-image-wrap:hover {
+  transform: translateY(-4px) scale(1.01);
+  border-color: var(--gold);
+  box-shadow: 0 25px 50px rgba(107, 30, 42, 0.22);
+}
+
+.story-image-wrap picture {
+  display: block;
+  width: 100%;
 }
 
 .story-image-wrap img {
   width: 100%;
   height: auto;
   display: block;
+  transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.story-image-wrap:hover img {
+  transform: scale(1.03);
 }
 
 .story-badge-floating {
   position: absolute;
-  bottom: 1rem;
-  left: 1rem;
-  right: 1rem;
-  background: rgba(28, 28, 36, 0.94);
-  backdrop-filter: blur(10px);
-  border: 1px solid var(--border-gold);
+  bottom: 1.1rem;
+  left: 1.1rem;
+  right: 1.1rem;
+  background: rgba(14, 14, 20, 0.75);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(201, 168, 76, 0.4);
   border-radius: var(--radius-sm);
-  padding: 0.85rem 1.1rem;
+  padding: 0.95rem 1.15rem;
   color: var(--alabaster);
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.5);
+  z-index: 10;
+}
+
+.story-badge-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-bottom: 0.25rem;
+}
+
+.story-badge-name {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--gold-light);
+  line-height: 1.2;
+}
+
+.story-badge-rea {
+  font-family: 'Outfit', sans-serif;
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: var(--gold);
+}
+
+.story-badge-desc {
+  font-family: 'Outfit', sans-serif;
+  font-size: 0.88rem;
+  color: #ECEAF2;
+  line-height: 1.4;
 }
 
 .story-content h2,
@@ -696,6 +1183,12 @@ h1, h2, h3, h4, .font-serif {
   position: relative;
   overflow: hidden;
   height: 250px;
+}
+
+.dimora-img-wrap picture {
+  display: block;
+  width: 100%;
+  height: 100%;
 }
 
 .dimora-img {
@@ -791,6 +1284,44 @@ h1, h2, h3, h4, .font-serif {
   border: 1px solid rgba(16, 185, 129, 0.25);
 }
 
+/* Cassetto Espandibile a Tendina (Dettagli & Dotazioni) */
+.dimora-drawer {
+  margin-top: 0.75rem;
+  border-top: 1px solid rgba(107, 30, 42, 0.08);
+  padding-top: 0.6rem;
+}
+
+.dimora-drawer-toggle {
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: var(--burgundy);
+  cursor: pointer;
+  list-style: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  user-select: none;
+  transition: color 0.2s ease;
+  padding: 2px 0;
+}
+
+.dimora-drawer-toggle::-webkit-details-marker {
+  display: none;
+}
+
+.dimora-drawer-toggle:hover {
+  color: var(--burgundy-light);
+}
+
+.dimora-drawer[open] .dimora-drawer-toggle {
+  color: var(--gold);
+  margin-bottom: 0.6rem;
+}
+
+.dimora-drawer-content {
+  animation: fadeIn 0.25s ease-in-out;
+}
+
 .dimora-airbnb-prompt {
   margin-top: 0.85rem;
   font-size: 0.8rem;
@@ -884,12 +1415,101 @@ h1, h2, h3, h4, .font-serif {
 }
 
 /* =========================================================================
+   SEZIONE DUBBI & PRE-FOOTER INTEGRATO (FLUIDO E SENZA STACCHI CROMATICI)
+   ========================================================================= */
+.faq-cta-finale {
+  padding: 6.5rem 0 4.5rem 0;
+  background: linear-gradient(180deg, #181822 0%, #121218 50%, #0A0A0E 100%);
+  color: var(--alabaster);
+  text-align: center;
+  border-top: 1px solid var(--border-gold);
+  position: relative;
+  width: 100%;
+}
+
+.faq-cta-finale .container {
+  max-width: 980px;
+}
+
+.faq-cta-title {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: clamp(2rem, 3.4vw, 2.7rem);
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: var(--alabaster);
+  line-height: 1.25;
+}
+
+.faq-cta-lead {
+  color: #D6D2E0;
+  font-size: 1.05rem;
+  line-height: 1.65;
+  margin-bottom: 2rem;
+  max-width: 780px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.faq-reassurance-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  margin: 2.5rem 0 3rem 0;
+  text-align: left;
+}
+
+.faq-reassurance-card {
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(201, 168, 76, 0.28);
+  border-radius: var(--radius-sm);
+  padding: 1.6rem 1.4rem;
+  transition: transform 0.25s ease, border-color 0.25s ease;
+}
+
+.faq-reassurance-card:hover {
+  transform: translateY(-3px);
+  border-color: var(--gold);
+  background: rgba(201, 168, 76, 0.07);
+}
+
+.faq-reassurance-icon {
+  font-size: 1.75rem;
+  margin-bottom: 0.75rem;
+}
+
+.faq-reassurance-title {
+  font-family: 'Outfit', sans-serif;
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--gold-light);
+  margin-bottom: 0.4rem;
+}
+
+.faq-reassurance-desc {
+  font-size: 0.88rem;
+  color: #D4D1DC;
+  line-height: 1.55;
+}
+
+.faq-cta-actions {
+  display: flex;
+  justify-content: center;
+  gap: 1.25rem;
+  flex-wrap: wrap;
+}
+
+.faq-cta-finale + .footer {
+  border-top: none;
+  padding-top: 1.5rem;
+}
+
+/* =========================================================================
    FOOTER ISTITUZIONALE
    ========================================================================= */
 .footer {
   background: #0A0A0E;
   color: var(--text-light-muted);
-  padding: 4rem 0 2rem 0;
+  padding: 4.5rem 0 2rem 0;
   border-top: 1px solid var(--border-gold);
   font-size: 0.88rem;
 }
@@ -910,9 +1530,213 @@ h1, h2, h3, h4, .font-serif {
   line-height: 1.6;
 }
 
+/* =========================================================================
+   ZONE & QUARTIERI PRESIDIATI A ROMA (LOCAL SEO & FIDUCIA)
+   ========================================================================= */
+.districts-section {
+  padding: 6.5rem 0;
+  background: var(--alabaster);
+  border-bottom: 1px solid var(--border-gold);
+}
+
+.districts-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.5rem;
+  margin-top: 2.5rem;
+}
+
+.district-card {
+  background: #FFFFFF;
+  border: 1px solid rgba(107, 30, 42, 0.12);
+  border-radius: var(--radius-sm);
+  padding: 1.85rem 1.6rem;
+  transition: all 0.25s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 180px;
+}
+
+.district-card:hover {
+  transform: translateY(-3px);
+  border-color: var(--gold);
+  box-shadow: 0 12px 28px rgba(201, 168, 76, 0.18);
+}
+
+.district-name {
+  font-family: 'Outfit', sans-serif;
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--burgundy);
+  margin-bottom: 0.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.district-desc {
+  font-size: 0.88rem;
+  color: var(--text-muted);
+  line-height: 1.55;
+}
+
+/* =========================================================================
+   FAQ ACCORDION (INTERATTIVA & SCHEMA.ORG ENABLED)
+   ========================================================================= */
+.faq-section {
+  padding: 6.5rem 0;
+  background: var(--alabaster-warm);
+}
+
+.faq-container {
+  max-width: 860px;
+  margin: 0 auto;
+}
+
+.faq-accordion {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-top: 2.2rem;
+}
+
+.faq-item {
+  background: #FFFFFF;
+  border: 1px solid rgba(107, 30, 42, 0.12);
+  border-radius: var(--radius-sm);
+  overflow: hidden;
+  transition: all 0.25s ease;
+}
+
+.faq-item.active {
+  border-color: var(--gold);
+  box-shadow: 0 8px 24px rgba(201, 168, 76, 0.12);
+}
+
+.faq-question {
+  width: 100%;
+  padding: 1.25rem 1.4rem;
+  background: transparent;
+  border: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-align: left;
+  cursor: pointer;
+  font-family: 'Outfit', sans-serif;
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: var(--burgundy);
+  transition: color 0.2s ease;
+  gap: 1rem;
+}
+
+.faq-question:hover {
+  color: var(--burgundy-light);
+}
+
+.faq-chevron {
+  font-size: 1.1rem;
+  color: var(--gold);
+  transition: transform 0.3s ease;
+  flex-shrink: 0;
+}
+
+.faq-item.active .faq-chevron {
+  transform: rotate(180deg);
+}
+
+.faq-answer {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.35s cubic-bezier(0.16, 1, 0.3, 1), padding 0.3s ease;
+  padding: 0 1.4rem;
+  font-size: 0.92rem;
+  color: #383842;
+  line-height: 1.65;
+  background: #FCFAF8;
+  border-top: 1px solid transparent;
+}
+
+.faq-item.active .faq-answer {
+  max-height: 350px;
+  padding: 1rem 1.4rem 1.35rem 1.4rem;
+  border-top-color: rgba(107, 30, 42, 0.08);
+}
+
+/* =========================================================================
+   PAGE HERO (PER LE SOTTOPAGINE DEDICATE)
+   ========================================================================= */
+.page-hero {
+  padding: 7rem 0 4.5rem 0;
+  background: radial-gradient(circle at 50% 40%, rgba(107, 30, 42, 0.75) 0%, rgba(18, 10, 14, 0.98) 85%);
+  color: var(--alabaster);
+  text-align: center;
+  border-bottom: 1px solid var(--border-gold);
+}
+
+.page-hero-title {
+  font-size: clamp(2rem, 3.5vw, 3rem);
+  font-weight: 800;
+  margin-bottom: 0.75rem;
+}
+
+.page-hero-lead {
+  font-size: 1.05rem;
+  color: #E6E3DC;
+  max-width: 720px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
 @media (max-width: 900px) {
-  .hero-dual-pathways, .story-grid, .footer-grid {
+  .hero-split-grid, .hero-dual-pathways, .story-grid, .footer-grid, .faq-reassurance-grid {
     grid-template-columns: 1fr;
+  }
+  .hero {
+    padding: 5.5rem 0 3.5rem 0;
+    min-height: auto;
+  }
+  .hero-text-col {
+    text-align: center;
+  }
+  .hero-actions-row {
+    justify-content: center;
+  }
+  .hero-trust-pills {
+    align-items: center;
+  }
+  .hero-founder-card {
+    max-width: 380px;
+    margin: 1.5rem auto 0 auto;
+  }
+  .authority-grid {
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+  }
+  .authority-stat-box {
+    border-right: none;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    padding-bottom: 1rem;
+  }
+  .authority-stat-box:last-child {
+    border-bottom: none;
+    padding-bottom: 0;
+  }
+  .pillars-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .superhost-certificate {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    padding: 1.75rem 1.5rem;
+  }
+  .superhost-badge-area {
+    border-right: none;
+    padding-right: 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    padding-bottom: 1.75rem;
   }
   .form-grid {
     grid-template-columns: 1fr;
@@ -927,3 +1751,10 @@ h1, h2, h3, h4, .font-serif {
     display: block;
   }
 }
+
+@media (max-width: 600px) {
+  .pillars-grid {
+    grid-template-columns: 1fr;
+  }
+}
+

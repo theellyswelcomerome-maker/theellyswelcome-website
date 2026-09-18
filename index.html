@@ -32,25 +32,19 @@
   <meta name="geo.position" content="41.8687;12.4497">
   <meta name="ICBM" content="41.8687, 12.4497">
 
-  <!-- Google Search Console: tag di verifica della proprietà del sito.
-       Sostituire 'GSC_VERIFICATION_TOKEN_PLACEHOLDER' con il token alfanumerico fornito da Search Console,
-       oppure verificare la proprietà a livello DNS tramite record TXT in Cloudflare DNS (consigliato per l'intero dominio). -->
-  <meta name="google-site-verification" content="GSC_VERIFICATION_TOKEN_PLACEHOLDER">
-
   <!-- Favicon / Touch Icon & Theme Color -->
   <meta name="theme-color" content="#6B1E2A">
   <link rel="icon" type="image/png" href="assets/logo.png">
   <link rel="apple-touch-icon" href="assets/logo.png">
 
-  <!-- Google Fonts -->
+  <!-- Preconnect Risorse Esterne -->
+  <link rel="preconnect" href="https://images.unsplash.com">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700;800;900&family=Outfit:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,600;0,700;1,400&display=swap" rel="stylesheet">
-  
-  <!-- Stylesheet -->
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800;900&family=Outfit:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;1,400;1,600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 
-  <!-- Schema.org JSON-LD Dati Strutturati (Local Business & Alloggi Conformi) -->
+  <!-- Schema.org JSON-LD Dati Strutturati -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -60,23 +54,13 @@
         "@id": "https://theellyswelcome.com/#business",
         "name": "The Ellys' Welcome",
         "legalName": "The Ellys' Welcome di Fiorino Giovanni",
-        "alternateName": "The Ellys' Welcome Rome",
         "url": "https://theellyswelcome.com/",
         "logo": "https://theellyswelcome.com/assets/logo.png",
-        "image": "https://theellyswelcome.com/assets/logo.png",
         "description": "Property management d'eccellenza, gestione alloggi turistici e locazioni brevi a Roma. Accoglienza familiare autentica e piena conformità normativa (CIN ministeriale, adempimenti telematici, REA RM-1792299).",
         "telephone": "+393383956240",
         "email": "theellyswelcomerome@gmail.com",
         "vatID": "IT18557821008",
         "taxID": "FRNGNN05R06I449E",
-        "identifier": [
-          {
-            "@type": "PropertyValue",
-            "propertyID": "REA",
-            "name": "Iscrizione Registro Imprese CCIAA Roma",
-            "value": "RM-1792299"
-          }
-        ],
         "priceRange": "€€",
         "address": {
           "@type": "PostalAddress",
@@ -91,196 +75,20 @@
           "latitude": 41.8687,
           "longitude": 12.4497
         },
-        "hasMap": "https://maps.google.com/?q=Via+Edoardo+Jenner+119+Roma",
         "areaServed": {
           "@type": "City",
           "name": "Roma"
         },
-        "contactPoint": {
-          "@type": "ContactPoint",
-          "telephone": "+393383956240",
-          "contactType": "customer service",
-          "email": "theellyswelcomerome@gmail.com",
-          "areaServed": "IT",
-          "availableLanguage": ["Italian", "English"]
-        },
-        "openingHoursSpecification": [
-          {
-            "@type": "OpeningHoursSpecification",
-            "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
-            "opens": "08:00",
-            "closes": "22:00"
-          }
-        ],
-        "containsPlace": [
-          { "@id": "https://theellyswelcome.com/#spacedom" },
-          { "@id": "https://theellyswelcome.com/#ellyshouse" },
-          { "@id": "https://theellyswelcome.com/#dipohouse" }
-        ],
-        "hasOfferCatalog": {
-          "@type": "OfferCatalog",
-          "name": "Servizi di Property Management e Dimore Turistiche a Roma",
-          "itemListElement": [
-            {
-              "@type": "Offer",
-              "itemOffered": {
-                "@type": "Service",
-                "name": "Property Management & Gestione Alloggi Turistici",
-                "description": "Gestione e co-hosting per locazioni turistiche con host privati a Roma: rilascio e pubblicazione CIN ministeriale, adempimenti telematici Alloggiati Web, ROSS 1000 e GECOS senza burocrazia per i proprietari."
-              }
-            },
-            {
-              "@type": "Offer",
-              "itemOffered": {
-                "@type": "Service",
-                "name": "Locazioni Turistiche e Dimore Esclusive a Roma",
-                "description": "Soggiorni autentici in dimore selezionate nel centro di Roma con assistenza dedicata H24 e standard qualitativi verificati."
-              }
-            }
-          ]
-        },
         "aggregateRating": {
           "@type": "AggregateRating",
-          "ratingValue": "4.96",
+          "ratingValue": "4.98",
           "bestRating": "5",
           "worstRating": "1",
-          "reviewCount": "120"
-        },
-        "founder": {
-          "@type": "Person",
-          "name": "Giovanni Fiorino",
-          "jobTitle": "Founder & Property Manager"
-        },
-        "sameAs": [
-          "https://www.instagram.com/theellyswelcome.rome/",
-          "https://www.airbnb.it/users/profile/1685312388218791725",
-          "https://www.airbnb.it/users/profile/1463769468775481181"
-        ]
-      },
-      {
-        "@type": "Apartment",
-        "@id": "https://theellyswelcome.com/#spacedom",
-        "name": "Space Dom",
-        "description": "Attico con travi a vista nel cuore di Roma a Via del Governo Vecchio (Piazza Navona). Struttura conforme in locazione turistica con CIN ministeriale.",
-        "containedInPlace": {
-          "@id": "https://theellyswelcome.com/#business"
-        },
-        "occupancy": {
-          "@type": "QuantitativeValue",
-          "maxValue": 6
-        },
-        "identifier": [
-          "IT058091C2OP2KNH3C",
-          {
-            "@type": "PropertyValue",
-            "propertyID": "CIN",
-            "name": "Codice Identificativo Nazionale",
-            "value": "IT058091C2OP2KNH3C"
-          }
-        ],
-        "address": {
-          "@type": "PostalAddress",
-          "streetAddress": "Via del Governo Vecchio",
-          "addressLocality": "Roma",
-          "postalCode": "00186",
-          "addressRegion": "RM",
-          "addressCountry": "IT"
-        },
-        "geo": {
-          "@type": "GeoCoordinates",
-          "latitude": 41.8984,
-          "longitude": 12.4705
-        }
-      },
-      {
-        "@type": "Apartment",
-        "@id": "https://theellyswelcome.com/#ellyshouse",
-        "name": "Elly's House",
-        "description": "Dimora curata e tranquilla nel quartiere residenziale di Monteverde, vicina a Trastevere. Struttura conforme in locazione turistica con CIN ministeriale.",
-        "containedInPlace": {
-          "@id": "https://theellyswelcome.com/#business"
-        },
-        "occupancy": {
-          "@type": "QuantitativeValue",
-          "maxValue": 4
-        },
-        "identifier": [
-          "IT058091C2AGXKMIKB",
-          {
-            "@type": "PropertyValue",
-            "propertyID": "CIN",
-            "name": "Codice Identificativo Nazionale",
-            "value": "IT058091C2AGXKMIKB"
-          }
-        ],
-        "address": {
-          "@type": "PostalAddress",
-          "streetAddress": "Via San Girolamo Emiliani",
-          "addressLocality": "Roma",
-          "postalCode": "00152",
-          "addressRegion": "RM",
-          "addressCountry": "IT"
-        },
-        "geo": {
-          "@type": "GeoCoordinates",
-          "latitude": 41.8741,
-          "longitude": 12.4632
-        }
-      },
-      {
-        "@type": "Apartment",
-        "@id": "https://theellyswelcome.com/#dipohouse",
-        "name": "Dipo House",
-        "description": "Trilocale moderno e luminoso nel quartiere Marconi, polo Roma Tre e Stazione Trastevere. Struttura conforme in locazione turistica con CIN ministeriale.",
-        "containedInPlace": {
-          "@id": "https://theellyswelcome.com/#business"
-        },
-        "occupancy": {
-          "@type": "QuantitativeValue",
-          "maxValue": 4
-        },
-        "identifier": [
-          "IT058091C24OKKNEHK",
-          {
-            "@type": "PropertyValue",
-            "propertyID": "CIN",
-            "name": "Codice Identificativo Nazionale",
-            "value": "IT058091C24OKKNEHK"
-          }
-        ],
-        "address": {
-          "@type": "PostalAddress",
-          "streetAddress": "Via Quirino Majorana",
-          "addressLocality": "Roma",
-          "postalCode": "00146",
-          "addressRegion": "RM",
-          "addressCountry": "IT"
-        },
-        "geo": {
-          "@type": "GeoCoordinates",
-          "latitude": 41.8633,
-          "longitude": 12.4695
+          "reviewCount": "448"
         }
       }
     ]
   }
-  </script>
-
-  <!-- Tracciamento & Web Analytics:
-       Cloudflare Web Analytics è attivo nativamente all'Edge su Cloudflare Pages (zero cookie, GDPR compliant).
-       Per Google Analytics 4, inserire l'ID reale (es. G-XXXXXXXXXX) nella variabile GA_ID sottostante. -->
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    const GA_ID = ''; // Inserire qui l'ID GA4 reale se desiderato
-    if (GA_ID && GA_ID.startsWith('G-')) {
-      const s = document.createElement('script');
-      s.async = true;
-      s.src = `https://www.googletagmanager.com/gtag/js?id=${GA_ID}`;
-      document.head.appendChild(s);
-      gtag('js', new Date());
-      gtag('config', GA_ID, { anonymize_ip: true });
-    }
   </script>
 </head>
 <body>
@@ -290,8 +98,11 @@
        ======================================================================= -->
   <nav class="navbar">
     <div class="container nav-container">
-      <a href="#" class="brand-logo">
-        <img src="assets/logo.png" alt="The Ellys' Welcome Logo" width="44" height="44" fetchpriority="high" decoding="async">
+      <a href="index.html" class="brand-logo">
+        <picture>
+          <source srcset="assets/logo-nav.webp" type="image/webp">
+          <img src="assets/logo-nav.png" alt="The Ellys' Welcome Logo" width="44" height="44" fetchpriority="high">
+        </picture>
         <div class="brand-text">
           <span class="brand-name">THE ELLYS' WELCOME</span>
           <span class="brand-tagline">Your Home, Our Care</span>
@@ -299,11 +110,11 @@
       </a>
 
       <ul class="nav-links" id="navLinks">
-        <li><a href="#chi-siamo" class="nav-link">Chi Siamo</a></li>
-        <li><a href="#pilastri" class="nav-link">I 4 Pilastri</a></li>
-        <li><a href="#recensioni" class="nav-link">Recensioni Airbnb</a></li>
-        <li><a href="#dimore" class="nav-link">Le Dimore</a></li>
-        <li><a href="#candidatura" class="nav-link nav-cta">Per i Proprietari →</a></li>
+        <li><a href="proprietari.html" class="nav-link">Per i Proprietari</a></li>
+        <li><a href="dimore.html" class="nav-link">Le Dimore</a></li>
+        <li><a href="chi-siamo.html" class="nav-link">Chi Siamo</a></li>
+        <li><a href="faq.html" class="nav-link">FAQ</a></li>
+        <li><a href="proprietari.html#candidatura" class="nav-link nav-cta">Candidatura Immobile →</a></li>
       </ul>
 
       <button class="mobile-menu-btn" onclick="toggleMobileMenu()">☰</button>
@@ -311,474 +122,223 @@
   </nav>
 
   <!-- =======================================================================
-       2. HERO SECTION
+       2. HERO MONUMENTALE: VOLTO UMANO, FIDUCIA & DUE PERCORSI
        ======================================================================= -->
   <header class="hero">
-    <div class="container hero-content">
+    <div class="container hero-split-grid">
 
-      <!-- Monumental Headline con Search Intent Ottimizzato -->
-      <h1 class="hero-title">
-        Property Management a Roma:<br>
-        <span class="gradient-gold">L'Arte dell'Accoglienza, il Rigore della Gestione.</span>
-      </h1>
+      <!-- Colonna Testuale: Titolo, Promessa & Azioni Rapide -->
+      <div class="hero-text-col">
+        <h1 class="hero-title">
+          Property Management a Roma:<br>
+          <span class="gradient-gold">L'Arte dell'Accoglienza, il Rigore della Gestione.</span>
+        </h1>
 
-      <p class="hero-subtitle">
-        Uniamo il calore dell'ospitalità familiare a un modello di property management tecnologico, trasparente e a prova di burocrazia. Operiamo a Roma tra Centro Storico, Monteverde e Marconi.
-      </p>
+        <p class="hero-subtitle">
+          Affidare la propria casa a Roma non è una transazione algoritmica, ma un patto di fiducia tra persone. Niente call center o gestioni standardizzate da remoto: combiniamo il calore dell'ospitalità familiare a un metodo economico e manageriale strutturato a Roma Tre, proteggendo il tuo immobile con presenza fisica costante e trasparenza assoluta.
+        </p>
 
-      <!-- Dual Pathways Cards (Split B2B / B2C con gerarchia H2 corretta) -->
-      <div class="hero-dual-pathways">
-        
-        <!-- B2B Card (Proprietari) -->
-        <div class="pathway-card b2b-card">
-          <div>
-            <div class="pathway-tag">🏛️ Per Proprietari & Investitori</div>
-            <h2 class="pathway-title">Gestione Completa "Zero Pensieri"</h2>
-            <p class="pathway-desc">
-              Massimizziamo la rendita del tuo alloggio con tutela totale: co-hosting professionale, rilascio CIN, adempimenti telematici a norma, visura camerale REA RM-1792299 e cura H24.
-            </p>
+        <div class="hero-trust-pills">
+          <div class="hero-trust-pill-item">
+            <span class="hero-trust-pill-icon">🛵</span>
+            <span><strong>Presidio Rapido in Scooter:</strong> Sul posto in 15 minuti nei quartieri di Roma.</span>
           </div>
-          <a href="#candidatura" class="btn btn-primary">Fai una Chiacchierata con Noi →</a>
+          <div class="hero-trust-pill-item">
+            <span class="hero-trust-pill-icon">📈</span>
+            <span><strong>Rendita Trasparente:</strong> Zero costi fissi, provvigione solo sul riscosso.</span>
+          </div>
+          <div class="hero-trust-pill-item">
+            <span class="hero-trust-pill-icon">⚖️</span>
+            <span><strong>Zero Burocrazia:</strong> CIN ministeriale, Questura Alloggiati Web, ISTAT e Comune a norma.</span>
+          </div>
         </div>
 
-        <!-- B2C Card (Ospiti) -->
-        <div class="pathway-card b2c-card">
-          <div>
-            <div class="pathway-tag">✨ Per i Nostri Ospiti</div>
-            <h2 class="pathway-title">Dimore Esclusive nel Cuore di Roma</h2>
-            <p class="pathway-desc">
-              Scegli le nostre dimore per il tuo soggiorno a Roma: scopri le foto reali, consulta gli annunci ufficiali o richiedi la tariffa speciale diretta.
-            </p>
-          </div>
-          <a href="#dimore" class="btn btn-secondary">Scopri le Dimore & Risparmia il 15% →</a>
+        <div class="hero-actions-row">
+          <a href="proprietari.html#candidatura" class="btn btn-primary btn-hero">
+            <span>Per i Proprietari: Candidatura Immobile</span>
+            <span>→</span>
+          </a>
+          <a href="dimore.html" class="btn btn-secondary btn-hero">
+            <span>Per gli Ospiti: Esplora le Dimore</span>
+            <span>↗</span>
+          </a>
         </div>
+      </div>
 
+      <!-- Colonna Visuale: Foto Reale del Fondatore & Credibilità -->
+      <div class="hero-visual-col">
+        <div class="hero-founder-card">
+          <div class="hero-founder-img-wrap">
+            <picture>
+              <source srcset="assets/giovanni.webp" type="image/webp">
+              <img src="assets/giovanni.jpg" alt="Giovanni Fiorino — Founder & Property Manager The Ellys' Welcome" width="500" height="600" fetchpriority="high">
+            </picture>
+            <div class="hero-founder-badge">
+              <div class="hero-founder-badge-top">
+                <span class="hero-founder-name">Giovanni Fiorino</span>
+              </div>
+              <div class="hero-founder-title">Founder & Property Manager • Università Roma Tre</div>
+              <div class="hero-founder-quote">«Ci metto la mia faccia, la mia reputazione e il mio scooter. Il tuo alloggio è custodito come fosse il nostro.»</div>
+            </div>
+          </div>
+        </div>
       </div>
 
     </div>
   </header>
 
   <!-- =======================================================================
-       3. SOCIAL PROOF & REVIEWS SECTION (SFUMATA ELEGANTE)
+       3. AUTHORITY STATS STRIP (METRICHE REALI & FIDUCIA)
        ======================================================================= -->
-  <section class="social-proof-section" id="recensioni">
+  <section class="authority-strip">
     <div class="container">
-      
-      <!-- Header Recensioni -->
-      <div class="proof-header">
-        <span class="section-badge" style="color: var(--gold); background: rgba(201, 168, 76, 0.15);">Riprova Sociale</span>
-        <h2 class="proof-title">Cosa Dicono i Nostri Ospiti</h2>
-        <p style="color: var(--text-light-muted); font-size: 0.95rem;">Estratti verbatim autentici registrati su Airbnb per le nostre dimore a Roma</p>
+      <div class="authority-grid">
+        <a href="https://www.airbnb.it/users/profile/1463769468775481181" target="_blank" rel="noopener noreferrer" class="authority-stat-box authority-stat-link" aria-label="Visualizza il profilo Superhost Airbnb con valutazione 4.98 su 5.0">
+          <div class="authority-num">4.98 / 5.0 <span class="authority-external-icon">↗</span></div>
+          <div class="authority-label">Punteggio Superhost Airbnb (448+ Recensioni)</div>
+          <span class="authority-stat-sub">Verifica le recensioni su Airbnb ↗</span>
+        </a>
+        <div class="authority-stat-box">
+          <div class="authority-num">15 Minuti</div>
+          <div class="authority-label">Presidio Fisico in Scooter nei Quartieri di Roma</div>
+        </div>
+        <div class="authority-stat-box">
+          <div class="authority-num">100% Conforme</div>
+          <div class="authority-label">CIN Ministeriale, Questura e Regolarità Fiscale</div>
+        </div>
       </div>
-
-      <!-- Griglia Recensioni Verbatim Reali con Glow on Hover -->
-      <div class="reviews-grid">
-        
-        <div class="review-card">
-          <div class="review-stars">★★★★★</div>
-          <p class="review-quote">
-            "Eleonora è un'host eccezionale, ci ha fatti sentire subito a casa. Cura maniacale nella pulizia e un'accoglienza calorosa che fa la differenza. Risposte immediate a qualsiasi nostra domanda su Roma."
-          </p>
-          <div class="review-author-meta">
-            <div class="author-avatar">E</div>
-            <div>
-              <div class="author-name">Recensione Ospite • Elly's House</div>
-              <div class="author-origin">Soggiorno a Monteverde / Trastevere • Superhost Eleonora</div>
-            </div>
-          </div>
-        </div>
-
-        <div class="review-card">
-          <div class="review-stars">★★★★★</div>
-          <p class="review-quote">
-            "Appartamento magnifico nel cuore di Roma, gestito con grandissima professionalità. Spazi perfetti, elettrodomestici e impianti in stato impeccabile e un'attenzione ai dettagli rara da trovare."
-          </p>
-          <div class="review-author-meta">
-            <div class="author-avatar">G</div>
-            <div>
-              <div class="author-name">Recensione Ospite • Space Dom</div>
-              <div class="author-origin">Soggiorno a Via del Governo Vecchio • Host Giovanni</div>
-            </div>
-          </div>
-        </div>
-
-        <div class="review-card">
-          <div class="review-stars">★★★★★</div>
-          <p class="review-quote">
-            "Posizione strategica, spazi curatissimi e procedura di check-in perfetta. Giovanni è stato disponibilissimo per ogni consiglio culinario e logistico. Ritorneremo sicuramente!"
-          </p>
-          <div class="review-author-meta">
-            <div class="author-avatar">D</div>
-            <div>
-              <div class="author-name">Recensione Ospite • Dipo House</div>
-              <div class="author-origin">Soggiorno a Marconi / Roma Tre • Host Giovanni</div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Hub Recensioni Airbnb Integrato nello stesso Stile delle Card -->
-        <div class="airbnb-hub-card">
-          <div class="airbnb-hub-left">
-            <div class="airbnb-hub-icon">★</div>
-            <div>
-              <div class="airbnb-hub-title">Profili Superhost Airbnb Verificati</div>
-              <div class="airbnb-hub-sub">Consulta di persona tutte le recensioni autentiche e i punteggi sui nostri profili ufficiali:</div>
-            </div>
-          </div>
-
-          <div class="airbnb-hub-actions">
-            <a href="https://www.airbnb.it/users/profile/1685312388218791725?previous_page_name=PdpHomeMarketplace" target="_blank" rel="noopener noreferrer" class="btn-airbnb-hub">
-              👤 Profilo Airbnb: Giovanni (Founder) ↗
-            </a>
-            <a href="https://www.airbnb.it/users/profile/1463769468775481181?previous_page_name=PdpHomeMarketplace" target="_blank" rel="noopener noreferrer" class="btn-airbnb-hub">
-              ⭐ Profilo Airbnb: Eleonora (Superhost) ↗
-            </a>
-          </div>
-        </div>
-
-      </div>
-
     </div>
   </section>
 
   <!-- =======================================================================
-       4. SEZIONE B2B: I 4 PILASTRI (COMPATTI, QUADRATI & ALTO RISALTO)
+       4. I DUE GRANDI PORTALI D'ACCESSO (DUE PERCORSI DISTINTI)
        ======================================================================= -->
-  <section class="section-b2b" id="pilastri">
+  <section class="dimore-section" style="padding: 5.5rem 0; background: var(--alabaster);">
     <div class="container">
-      
       <div class="section-header">
-        <span class="section-badge">Il Nostro Metodo Operativo</span>
-        <h2 class="section-title">I 4 Pilastri di The Ellys' Welcome</h2>
+        <span class="section-badge">Due Percorsi, Un'Unica Eccellenza</span>
+        <h2 class="section-title">Come Possiamo Esserti Utili Oggi?</h2>
         <p class="section-lead">
-          In un mercato saturo di gestioni standardizzate e improvvisate, proteggiamo e valorizziamo il tuo immobile attraverso 4 vantaggi competitivi concreti.
+          Che tu voglia affidare un immobile per massimizzarne la rendita o vivere un soggiorno autentico a Roma, abbiamo strutturato il percorso ideale per te.
         </p>
       </div>
 
-      <div class="pillars-grid">
+      <div class="hero-dual-pathways">
         
-        <!-- Pilastro 1 -->
-        <div class="pillar-card">
-          <div class="pillar-header">
-            <div class="pillar-icon">🏛️</div>
-            <div class="pillar-num">01</div>
+        <!-- Portale B2B Proprietari -->
+        <div class="portal-card b2b-portal">
+          <div>
+            <div class="portal-header-meta">
+              <span class="portal-tag">🏛️ PROPRIETARI & INVESTITORI</span>
+              <span class="portal-status"><span class="portal-status-dot"></span> Selezione Attiva</span>
+            </div>
+            <h2 class="portal-title">Gestione Completa "Zero Pensieri"</h2>
+            <div class="portal-features-list">
+              <div class="portal-feature-item">
+                <span class="portal-feature-icon">🛵</span>
+                <span><strong>Presidio Diretto:</strong> Intervento in scooter in 15 minuti nei quartieri di Roma.</span>
+              </div>
+              <div class="portal-feature-item">
+                <span class="portal-feature-icon">📈</span>
+                <span><strong>Rendita Ottimizzata:</strong> Zero spese fisse, provvigione solo sulle prenotazioni incassate.</span>
+              </div>
+              <div class="portal-feature-item">
+                <span class="portal-feature-icon">⚖️</span>
+                <span><strong>Zero Burocrazia:</strong> CIN ministeriale, schedine Questura, ISTAT e Comune gestiti da noi.</span>
+              </div>
+              <div class="portal-feature-item">
+                <span class="portal-feature-icon">🔍</span>
+                <span><strong>Stima Gratuita:</strong> Valutiamo il potenziale economico del tuo appartamento senza impegno.</span>
+              </div>
+            </div>
           </div>
-          <h3 class="pillar-title">Accoglienza Romana Autentica</h3>
-          <p class="pillar-desc">
-            Nati dall'esperienza Superhost di Eleonora, accogliamo ogni viaggiatore con l'empatia dell'antica <em>Xenia</em> romana, ottenendo costantemente recensioni a punteggio pieno.
-          </p>
+          <a href="proprietari.html#candidatura" class="portal-cta-btn btn-primary">
+            <span>Vai al Modulo di Candidatura Immobile</span>
+            <span>→</span>
+          </a>
         </div>
 
-        <!-- Pilastro 2 -->
-        <div class="pillar-card">
-          <div class="pillar-header">
-            <div class="pillar-icon">⚡</div>
-            <div class="pillar-num">02</div>
+        <!-- Portale B2C Ospiti -->
+        <div class="portal-card b2c-portal">
+          <div>
+            <div class="portal-header-meta">
+              <span class="portal-tag">✨ COLLEZIONE DIMORE</span>
+              <span class="portal-status" style="color: #FFB3B6;"><span class="portal-status-dot" style="background: #FF5A5F; box-shadow: 0 0 8px #FF5A5F;"></span> -15% Diretto</span>
+            </div>
+            <h2 class="portal-title">Dimore di Pregio nel Cuore di Roma</h2>
+            <div class="portal-features-list">
+              <div class="portal-feature-item">
+                <span class="portal-feature-icon">🏛️</span>
+                <span><strong>Posizioni Iconiche:</strong> Piazza Navona, Monteverde Vecchio e Marconi Roma Tre.</span>
+              </div>
+              <div class="portal-feature-item">
+                <span class="portal-feature-icon">⭐</span>
+                <span><strong>Standard Superhost:</strong> Valutazione media 4.98/5 basata su oltre 448 recensioni verificate.</span>
+              </div>
+              <div class="portal-feature-item">
+                <span class="portal-feature-icon">🏷️</span>
+                <span><strong>Miglior Tariffa Garantita:</strong> Risparmia il 15% sulle commissioni prenotando direttamente.</span>
+              </div>
+              <div class="portal-feature-item">
+                <span class="portal-feature-icon">🛎️</span>
+                <span><strong>Accoglienza Curata:</strong> Assistenza personalizzata dal primo contatto fino al check-out.</span>
+              </div>
+            </div>
           </div>
-          <h3 class="pillar-title">Reattività & Presidio H24</h3>
-          <p class="pillar-desc">
-            Presidiamo fisicamente il territorio di Roma e interveniamo tempestivamente per qualsiasi necessità tecnica, garantendo che la casa sia costantemente protetta e manutenuta.
-          </p>
-        </div>
-
-        <!-- Pilastro 3 -->
-        <div class="pillar-card">
-          <div class="pillar-header">
-            <div class="pillar-icon">📊</div>
-            <div class="pillar-num">03</div>
-          </div>
-          <h3 class="pillar-title">Trasparenza & Rendiconto Live</h3>
-          <p class="pillar-desc">
-            Nessun costo nascosto. I proprietari hanno visibilità in tempo reale sull'andamento delle prenotazioni, sui calendari e sui rendiconti contabili chiari e verificabili.
-          </p>
-        </div>
-
-        <!-- Pilastro 4 -->
-        <div class="pillar-card">
-          <div class="pillar-header">
-            <div class="pillar-icon">⚖️</div>
-            <div class="pillar-num">04</div>
-          </div>
-          <h3 class="pillar-title">Conformità Legale & Zero Burocrazia</h3>
-          <p class="pillar-desc">
-            Gestione completa di tutti gli obblighi normativi per locazioni turistiche e affitti brevi a Roma: rilascio e pubblicazione CIN ministeriale, iscrizione CCIAA Roma REA RM-1792299 e invio schedine automatico a Questura (Alloggiati Web), ISTAT (ROSS 1000) e Comune di Roma (GECOS).
-          </p>
+          <a href="dimore.html" class="portal-cta-btn btn-secondary">
+            <span>Esplora Tutte le Dimore Selezionate</span>
+            <span>↗</span>
+          </a>
         </div>
 
       </div>
-
     </div>
   </section>
 
   <!-- =======================================================================
-       5. LA NOSTRA STORIA & FOUNDER BIO
+       6. FINALE DI PAGINA SEAMLESS: DUBBI & FAQ
        ======================================================================= -->
-  <section class="story-section" id="chi-siamo">
+  <section class="faq-cta-finale">
     <div class="container">
-      <div class="story-grid">
-        
-        <div class="story-image-wrap">
-          <img src="assets/giovanni.jpg" alt="Giovanni Fiorino — Founder & Property Manager" loading="lazy" decoding="async" width="500" height="600">
-          <div class="story-badge-floating">
-            <strong style="color: var(--gold); font-size: 1.05rem;">Giovanni Fiorino</strong><br>
-            <span style="font-size: 0.85rem; color: #D0D0D8;">Founder & Property Manager • Università di Roma Tre</span>
-          </div>
+      <span class="section-badge" style="color: var(--gold-light); background: rgba(201, 168, 76, 0.15); margin-bottom: 1rem;">Fiducia & Trasparenza</span>
+      <h2 class="faq-cta-title">
+        Hai Dubbi su Compensi, Tutela o Burocrazia?
+      </h2>
+      <p class="faq-cta-lead">
+        La gestione di una casa a Roma richiede certezze assolute: nessun costo nascosto, massima protezione del patrimonio immobiliare e assistenza immediata.
+      </p>
+
+      <div class="faq-reassurance-grid">
+        <div class="faq-reassurance-card">
+          <div class="faq-reassurance-icon">💳</div>
+          <h3 class="faq-reassurance-title">Compensi & Zero Costi Fissi</h3>
+          <p class="faq-reassurance-desc">Nessun costo fisso di abbonamento. Tratteniamo la provvigione unicamente sulle prenotazioni realmente incassate: guadagniamo solo se guadagni tu.</p>
         </div>
-
-        <div class="story-content">
-          <span class="section-badge">Chi Siamo</span>
-          <h2 class="story-title">Da Casa di Famiglia ad Azienda di Property Management</h2>
-          
-          <p class="story-text">
-            Tutto è nato dall'intuito di mia madre <strong>Eleonora</strong>, che anni fa ha trasformato un immobile di famiglia in una delle case vacanze più apprezzate di Roma, conquistando lo status di <strong>Superhost</strong> grazie a un'accoglienza calorosa, attenta e profondamente umana.
-          </p>
-
-          <p class="story-text">
-            Lavorando al suo fianco fin dal primo giorno, ho unito l'esperienza operativa sul campo al mio percorso accademico in <strong>Economia e Gestione delle Imprese presso l'Università di Roma Tre</strong>.
-          </p>
-
-          <p class="story-text">
-            Studiando la modellistica aziendale e la catena del valore strategica, ho strutturato un modello di gestione che preserva l'anima dell'accoglienza artigianale eliminando ogni inefficienza grazie a software e processi all'avanguardia.
-          </p>
-
-          <div style="margin-top: 1.5rem;">
-            <a href="#candidatura" class="btn btn-primary">Parla Direttamente con Me →</a>
-          </div>
+        <div class="faq-reassurance-card">
+          <div class="faq-reassurance-icon">🛡️</div>
+          <h3 class="faq-reassurance-title">Tutela Totale dell'Immobile</h3>
+          <p class="faq-reassurance-desc">Pre-selezione rigorosa su canali verificati, rifiuto tassativo di feste o gruppi a rischio e ispezione fisica diretta ad ogni check-out.</p>
         </div>
+        <div class="faq-reassurance-card">
+          <div class="faq-reassurance-icon">⚖️</div>
+          <h3 class="faq-reassurance-title">Zero Burocrazia per Te</h3>
+          <p class="faq-reassurance-desc">CIN ministeriale, invio telematico schedine Alloggiati Web Questura H24, comunicazioni ISTAT e tassa di soggiorno gestiti interamente da noi.</p>
+        </div>
+      </div>
 
+      <div class="faq-cta-actions">
+        <a href="faq.html" class="btn btn-primary">Consulta Tutte le Domande Frequenti (FAQ) →</a>
+        <a href="proprietari.html#candidatura" class="btn btn-secondary">Parla con Giovanni del Tuo Immobile</a>
       </div>
     </div>
   </section>
 
   <!-- =======================================================================
-       6. SHOWCASE DIMORE (CARD CLICCABILI + FOTO REALI + DATI VERIFICATI)
-       ======================================================================= -->
-  <section class="dimore-section" id="dimore">
-    <div class="container">
-      
-      <div class="section-header">
-        <span class="section-badge">Il Nostro Portfolio a Roma</span>
-        <h2 class="section-title">Le Nostre Dimore</h2>
-        <p class="section-lead">
-          Clicca su qualsiasi alloggio per visualizzare l'annuncio completo su Airbnb, oppure richiedi la disponibilità diretta per <strong>risparmiare il 15% sulle commissioni</strong>.
-        </p>
-      </div>
-
-      <div class="dimore-grid">
-        
-        <!-- Dimora 1: Space Dom -->
-        <div class="dimora-card-wrapper">
-          <a href="https://www.airbnb.it/rooms/1363113629357768975?source_impression_id=p3_1787579631_P3eaWgtd9Msi8TO4" target="_blank" rel="noopener noreferrer" class="dimora-clickable-card" title="Clicca per aprire l'annuncio Airbnb di Space Dom">
-            <div class="dimora-img-wrap">
-              <img src="assets/spacedom.jpg" alt="Space Dom — Via del Governo Vecchio" class="dimora-img" loading="lazy" decoding="async" width="600" height="400">
-              <div class="dimora-airbnb-badge">
-                <span>★</span> Airbnb Ufficiale ↗
-              </div>
-            </div>
-            <div class="dimora-body">
-              <div class="dimora-location">📍 Centro Storico • Via del Governo Vecchio (Piazza Navona)</div>
-              <h3 class="dimora-title">Space Dom</h3>
-              <div class="dimora-features">
-                <span>🏛️ ~120 mq</span>
-                <span>👥 Fino a 6 Ospiti</span>
-                <span>🛏️ 3 Camere da Letto (3 Matrimoniali)</span>
-              </div>
-              <p class="dimora-desc">
-                Attico mansardato con travi a vista in legno, camino d'epoca, ampi spazi luminosi e affacci suggestivi nel cuore del centro storico di Roma.
-              </p>
-              <div class="dimora-badges-wrap">
-                <span class="dimora-cin-badge">CIN: IT058091C2OP2KNH3C</span>
-                <span class="dimora-compliance-badge">✓ Locazione Turistica Conforme</span>
-              </div>
-              <div class="dimora-airbnb-prompt">
-                <span>🔗 Clicca per vedere foto complete, disponibilità e recensioni su Airbnb ↗</span>
-              </div>
-            </div>
-          </a>
-          <a href="https://wa.me/393383956240?text=Ciao%20Giovanni!%20Ho%20visto%20Space%20Dom%20sul%20sito%20The%20Ellys%20Welcome%20e%20vorrei%20richiedere%20disponibilit%C3%A0%20con%20tariffa%20speciale%20diretta." target="_blank" rel="noopener noreferrer" class="dimora-direct-btn">
-            ✨ Risparmia il 15% • Richiedi Soggiorno Diretto su WhatsApp
-          </a>
-        </div>
-
-        <!-- Dimora 2: Elly's House -->
-        <div class="dimora-card-wrapper">
-          <a href="https://www.airbnb.it/rooms/657062393546995233?source_impression_id=p3_1787579706_P3y6OGJAzzbxVi8V" target="_blank" rel="noopener noreferrer" class="dimora-clickable-card" title="Clicca per aprire l'annuncio Airbnb di Elly's House">
-            <div class="dimora-img-wrap">
-              <img src="assets/ellyshouse.png" alt="Elly's House — Monteverde" class="dimora-img" loading="lazy" decoding="async" width="600" height="400">
-              <div class="dimora-airbnb-badge">
-                <span>★</span> Airbnb Ufficiale ↗
-              </div>
-            </div>
-            <div class="dimora-body">
-              <div class="dimora-location">📍 Monteverde • Via San Girolamo Emiliani (Stazione Trastevere)</div>
-              <h3 class="dimora-title">Elly's House</h3>
-              <div class="dimora-features">
-                <span>🏡 ~65 mq</span>
-                <span>👥 Fino a 4 Ospiti</span>
-                <span>🌿 Zona Residenziale e Silenziosa</span>
-              </div>
-              <p class="dimora-desc">
-                L'appartamento originario di Eleonora. Tranquillità residenziale a Monteverde, ottimamente collegato con la Stazione Trastevere e il centro.
-              </p>
-              <div class="dimora-badges-wrap">
-                <span class="dimora-cin-badge">CIN: IT058091C2AGXKMIKB</span>
-                <span class="dimora-compliance-badge">✓ Locazione Turistica Conforme</span>
-              </div>
-              <div class="dimora-airbnb-prompt">
-                <span>🔗 Clicca per vedere foto complete, disponibilità e recensioni su Airbnb ↗</span>
-              </div>
-            </div>
-          </a>
-          <a href="https://wa.me/393383956240?text=Ciao%20Giovanni!%20Ho%20visto%20Ellys%20House%20sul%20sito%20The%20Ellys%20Welcome%20e%20vorrei%20richiedere%20disponibilit%C3%A0%20con%20tariffa%20speciale%20diretta." target="_blank" rel="noopener noreferrer" class="dimora-direct-btn">
-            ✨ Risparmia il 15% • Richiedi Soggiorno Diretto su WhatsApp
-          </a>
-        </div>
-
-        <!-- Dimora 3: Dipo House -->
-        <div class="dimora-card-wrapper">
-          <a href="https://www.airbnb.it/rooms/1125438508462187206?source_impression_id=p3_1787579674_P37oEA5RUicw2iwO" target="_blank" rel="noopener noreferrer" class="dimora-clickable-card" title="Clicca per aprire l'annuncio Airbnb di Dipo House">
-            <div class="dimora-img-wrap">
-              <img src="assets/dipohouse.png" alt="Dipo House — Marconi" class="dimora-img" loading="lazy" decoding="async" width="600" height="400">
-              <div class="dimora-airbnb-badge">
-                <span>★</span> Airbnb Ufficiale ↗
-              </div>
-            </div>
-            <div class="dimora-body">
-              <div class="dimora-location">📍 Marconi • Via Quirino Majorana (Polo Roma Tre)</div>
-              <h3 class="dimora-title">Dipo House</h3>
-              <div class="dimora-features">
-                <span>☀️ ~65 mq</span>
-                <span>👥 Fino a 4 Ospiti</span>
-                <span>🚆 Vicino Stazione Trastevere</span>
-              </div>
-              <p class="dimora-desc">
-                Trilocale moderno e luminoso nel quartiere Marconi, arredato con cura e dotato di ogni comfort a breve distanza dalla Stazione Trastevere.
-              </p>
-              <div class="dimora-badges-wrap">
-                <span class="dimora-cin-badge">CIN: IT058091C24OKKNEHK</span>
-                <span class="dimora-compliance-badge">✓ Locazione Turistica Conforme</span>
-              </div>
-              <div class="dimora-airbnb-prompt">
-                <span>🔗 Clicca per vedere foto complete, disponibilità e recensioni su Airbnb ↗</span>
-              </div>
-            </div>
-          </a>
-          <a href="https://wa.me/393383956240?text=Ciao%20Giovanni!%20Ho%20visto%20Dipo%20House%20sul%20sito%20The%20Ellys%20Welcome%20e%20vorrei%20richiedere%20disponibilit%C3%A0%20con%20tariffa%20speciale%20diretta." target="_blank" rel="noopener noreferrer" class="dimora-direct-btn">
-            ✨ Risparmia il 15% • Richiedi Soggiorno Diretto su WhatsApp
-          </a>
-        </div>
-
-      </div>
-
-    </div>
-  </section>
-
-  <!-- =======================================================================
-       7. LEAD CAPTURE FORM (ALTO CONTRASTO)
-       ======================================================================= -->
-  <section class="contact-section" id="candidatura">
-    <div class="container">
-      
-      <div class="section-header" style="margin-bottom: 2.5rem;">
-        <span class="section-badge" style="color: var(--gold); background: rgba(201, 168, 76, 0.15);">Contatto Diretto Senza Impegno</span>
-        <h2 class="section-title" style="color: var(--alabaster);">Parliamo del Tuo Immobile a Roma</h2>
-        <p style="color: var(--text-light-muted); font-size: 1.05rem; max-width: 680px; margin: 0 auto;">
-          Nessuna pressione commerciale: facciamo una chiacchierata informale per valutare la tua casa. Ci occupiamo noi di ogni adempimento: regolarizzazione, attribuzione CIN, adempimenti telematici a norma e gestione operativa completa in co-hosting.
-        </p>
-      </div>
-
-      <div class="form-card">
-        <form id="ownerLeadForm" onsubmit="handleLeadSubmit(event)">
-          <!-- Honeypot antispam -->
-          <input type="text" id="ownerHp" name="_hp" style="display:none !important;" tabindex="-1" autocomplete="off">
-          
-          <div class="form-grid">
-            
-            <div>
-              <label class="form-label" for="ownerName">Nome e Cognome *</label>
-              <input type="text" id="ownerName" class="form-control" placeholder="Es. Marco Rossi" required>
-            </div>
-
-            <div>
-              <label class="form-label" for="ownerPhone">Telefono / WhatsApp *</label>
-              <input type="tel" id="ownerPhone" class="form-control" placeholder="Es. +39 333 1234567" required>
-            </div>
-
-            <div>
-              <label class="form-label" for="ownerEmail">Email *</label>
-              <input type="email" id="ownerEmail" class="form-control" placeholder="Es. marco.rossi@email.it" required>
-            </div>
-
-            <div>
-              <label class="form-label" for="ownerZone">Indirizzo o Zona dell'Immobile *</label>
-              <input type="text" id="ownerZone" class="form-control" placeholder="Es. Trastevere, Centro, Monteverde..." required>
-            </div>
-
-            <div>
-              <label class="form-label" for="ownerType">Tipologia Immobile</label>
-              <select id="ownerType" class="form-control">
-                <option value="Bilocale (40-60 mq)">Bilocale (40-60 mq)</option>
-                <option value="Trilocale (60-90 mq)">Trilocale (60-90 mq)</option>
-                <option value="Quadrilocale / Ampia metratura (>90 mq)">Quadrilocale / Ampia metratura (>90 mq)</option>
-                <option value="Attico con Terrazzo">Attico con Terrazzo</option>
-                <option value="Intero Palazzetto / Più unità">Intero Palazzetto / Più unità</option>
-              </select>
-            </div>
-
-            <div>
-              <label class="form-label" for="ownerState">Stato Attuale della Casa</label>
-              <select id="ownerState" class="form-control">
-                <option value="Già arredato e pronto">Già arredato e pronto</option>
-                <option value="Già attivo come casa vacanze">Già attivo come casa vacanze</option>
-                <option value="Da ristrutturare / Allestire">Da ristrutturare / Allestire</option>
-                <option value="Sfitto da arredare">Sfitto da arredare</option>
-              </select>
-            </div>
-
-            <div class="form-group full">
-              <label class="form-label" for="ownerNotes">Come possiamo aiutarti? (Note facoltative)</label>
-              <textarea id="ownerNotes" class="form-control" rows="3" placeholder="Raccontaci brevemente la tua situazione o dubbi particolari..."></textarea>
-            </div>
-
-            <div class="form-group full" style="margin-top: 0.5rem;">
-              <button type="submit" id="btnSubmitLead" class="btn btn-primary" style="width: 100%; padding: 1.1rem; font-size: 1.05rem;">
-                ☕ Richiedi una Chiacchierata con Giovanni →
-              </button>
-            </div>
-
-          </div>
-
-          <div id="formSuccessMessage" style="display: none; margin-top: 1.5rem; padding: 1.35rem; background: rgba(16, 185, 129, 0.15); border: 1px solid #10B981; border-radius: var(--radius-sm); color: #10B981; text-align: center;">
-            <strong style="font-size: 1.1rem;">✓ Richiesta Ricevuta con Successo!</strong><br>
-            <span style="font-size: 0.9rem; color: var(--alabaster); display: block; margin-top: 0.35rem; margin-bottom: 1rem;">
-              Grazie per averci contattato. Giovanni ti risponderà personalmente entro 24 ore per concordare una chiacchierata senza impegno.
-            </span>
-            <a href="https://wa.me/393383956240?text=Ciao%20Giovanni!%20Ho%20appena%20compilato%20il%20modulo%20sul%20sito%20per%20il%20mio%20immobile." target="_blank" rel="noopener noreferrer" class="btn btn-secondary" style="display: inline-block; padding: 0.6rem 1.2rem; font-size: 0.9rem;">
-              💬 Scrivi subito su WhatsApp per priorità diretta →
-            </a>
-          </div>
-
-          <div id="formErrorMessage" style="display: none; margin-top: 1.5rem; padding: 1.35rem; background: rgba(239, 68, 68, 0.15); border: 1px solid #EF4444; border-radius: var(--radius-sm); color: #FCA5A5; text-align: center;">
-            <strong style="font-size: 1.1rem; color: #EF4444;">⚠️ Si è verificato un problema</strong><br>
-            <span style="font-size: 0.9rem; color: var(--alabaster); display: block; margin-top: 0.35rem;">
-              Non siamo riusciti a trasmettere automaticamente la richiesta. Puoi scriverci direttamente su WhatsApp: 
-              <a href="https://wa.me/393383956240?text=Ciao%20Giovanni!%20Vorrei%20informazioni%20sulla%20gestione%20del%20mio%20immobile." target="_blank" rel="noopener noreferrer" style="color: var(--gold-light); font-weight: 700; text-decoration: underline;">+39 338 3956240 ↗</a>
-            </span>
-          </div>
-
-        </form>
-      </div>
-
-    </div>
-  </section>
-
-  <!-- =======================================================================
-       8. FOOTER ISTITUZIONALE & COMPLIANCE
+       7. FOOTER ISTITUZIONALE
        ======================================================================= -->
   <footer class="footer">
     <div class="container">
       <div class="footer-grid">
-        
         <div>
           <div style="font-family: 'Cinzel', serif; font-weight: 800; font-size: 1.25rem; color: var(--alabaster); margin-bottom: 0.4rem;">
             THE ELLY'S WELCOME
@@ -799,23 +359,23 @@
           <p style="margin-bottom: 0.4rem;">📍 <strong>Presidio Fisico:</strong> <a href="https://maps.google.com/?q=Via+Edoardo+Jenner+119+Roma" target="_blank" rel="noopener noreferrer" style="color: var(--alabaster); text-decoration: none;">Via Edoardo Jenner, 119 - Int. 36, 00151 Roma (RM) ↗</a></p>
           <p style="margin-bottom: 0.4rem;">📞 <strong>Telefono / WhatsApp:</strong> <a href="tel:+393383956240" style="color: var(--alabaster); text-decoration: none;">+39 338 3956240</a></p>
           <p style="margin-bottom: 0.4rem;">✉️ <strong>Email:</strong> <a href="mailto:theellyswelcomerome@gmail.com" style="color: var(--gold-light); text-decoration: none;">theellyswelcomerome@gmail.com</a></p>
-          <p style="margin-bottom: 0.4rem;">🔒 <strong>PEC:</strong> <a href="mailto:giovanni.fiorino@arubapec.it" style="color: var(--text-light-muted); text-decoration: none;">giovanni.fiorino@arubapec.it</a></p>
           <p style="font-size: 0.82rem; color: var(--gold-light); margin-top: 0.45rem;">🕒 <strong>Orari:</strong> Lun - Dom 08:00 - 22:00 (Reperibilità Emergenze H24)</p>
         </div>
 
         <div>
-          <div style="font-weight: 700; color: var(--alabaster); margin-bottom: 0.85rem; font-size: 0.95rem;">Canali Ufficiali</div>
-          <p style="margin-bottom: 0.45rem;"><a href="https://www.airbnb.it/users/profile/1685312388218791725?previous_page_name=PdpHomeMarketplace" target="_blank" rel="noopener noreferrer" style="color: #FF7E82; text-decoration: none; font-weight: 600;">Airbnb: Profilo Giovanni ↗</a></p>
-          <p style="margin-bottom: 0.45rem;"><a href="https://www.airbnb.it/users/profile/1463769468775481181?previous_page_name=PdpHomeMarketplace" target="_blank" rel="noopener noreferrer" style="color: #FF7E82; text-decoration: none; font-weight: 600;">Airbnb: Profilo Eleonora ↗</a></p>
+          <div style="font-weight: 700; color: var(--alabaster); margin-bottom: 0.85rem; font-size: 0.95rem;">Navigazione</div>
+          <p style="margin-bottom: 0.45rem;"><a href="proprietari.html" style="color: var(--gold-light); text-decoration: none; font-weight: 600;">Per i Proprietari ↗</a></p>
+          <p style="margin-bottom: 0.45rem;"><a href="dimore.html" style="color: var(--alabaster); text-decoration: none;">Le Nostre Dimore ↗</a></p>
+          <p style="margin-bottom: 0.45rem;"><a href="chi-siamo.html" style="color: var(--alabaster); text-decoration: none;">La Nostra Storia ↗</a></p>
+          <p style="margin-bottom: 0.45rem;"><a href="faq.html" style="color: var(--alabaster); text-decoration: none;">Domande Frequenti (FAQ) ↗</a></p>
           <p><a href="https://www.instagram.com/theellyswelcome.rome/" target="_blank" rel="noopener noreferrer" style="color: var(--gold); text-decoration: none; font-weight: 600;">Instagram: @theellyswelcome.rome ↗</a></p>
         </div>
-
       </div>
 
       <div class="footer-bottom">
-        THE ELLY'S WELCOME DI FIORINO GIOVANNI • Sede Legale e Operativa: Via Edoardo Jenner 119 int 36, 00151 Roma (RM) • P.IVA 18557821008 • Codice Fiscale FRNGNN05R06I449E • Iscritta al Registro delle Imprese di Roma con REA RM-1792299 (Visura Camerale ordinaria).<br>
-        Tutte le strutture operate sono gestite in regime di locazione turistica e affitti brevi nel pieno rispetto della normativa nazionale e locale: Codice Identificativo Nazionale (CIN), allineamento Questura di Roma (Alloggiati Web), Regione Lazio (ROSS 1000) e Roma Capitale (GECOS).<br>
-        Informativa Privacy resa ai sensi del Regolamento UE 2016/679 (GDPR). Tutti i diritti riservati © 2026.
+        THE ELLY'S WELCOME DI FIORINO GIOVANNI • Sede Legale e Operativa: Via Edoardo Jenner 119 int 36, 00151 Roma (RM) • P.IVA 18557821008 • Iscritta CCIAA di Roma REA RM-1792299.<br>
+        Tutte le strutture operate sono gestite nel rispetto del Codice Identificativo Nazionale (CIN), Questura (Alloggiati Web), Regione Lazio (ROSS 1000) e Roma Capitale (GECOS).<br>
+        Tutti i diritti riservati © 2026.
       </div>
     </div>
   </footer>

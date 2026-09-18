@@ -127,7 +127,35 @@ function setupTrackingListeners() {
   });
 }
 
+/**
+ * Gestione accordion interattivo FAQ
+ */
+export function toggleFaq(btn) {
+  const item = btn.closest('.faq-item');
+  if (!item) return;
+  const isActive = item.classList.contains('active');
+
+  // Chiude gli altri elementi aperti per pulizia visiva
+  document.querySelectorAll('.faq-item.active').forEach(openItem => {
+    if (openItem !== item) {
+      openItem.classList.remove('active');
+      openItem.querySelector('.faq-question')?.setAttribute('aria-expanded', 'false');
+    }
+  });
+
+  // Alterna stato corrente
+  if (isActive) {
+    item.classList.remove('active');
+    btn.setAttribute('aria-expanded', 'false');
+  } else {
+    item.classList.add('active');
+    btn.setAttribute('aria-expanded', 'true');
+  }
+}
+
 // Esportazione per l'uso globale inline HTML
 window.toggleMobileMenu = toggleMobileMenu;
 window.handleLeadSubmit = handleLeadSubmit;
 window.trackEvent = trackEvent;
+window.toggleFaq = toggleFaq;
+
